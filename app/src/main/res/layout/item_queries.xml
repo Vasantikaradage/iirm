@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTicketNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:includeFontPadding="false"
+            android:text="Ticket #"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQryReplies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvQryReplies"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQRYid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:includeFontPadding="false"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/largeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketNo"
+            tools:ignore="MissingConstraints"
+            tools:text="1532" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQryReplies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:textColor="@color/gradient_end"
+            android:textSize="@dimen/textSize"
+
+            app:layout_constraintBottom_toBottomOf="@+id/tvQRYstatus"
+            app:layout_constraintEnd_toStartOf="@+id/tvQRYstatus"
+            app:layout_constraintStart_toEndOf="@+id/tvTicketNo"
+            app:layout_constraintTop_toTopOf="@+id/tvQRYstatus"
+            tools:text="6 Replies" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQRYstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/new_query"
+            android:fontFamily="@font/setpoppins"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/titleCardCornerRadius"
+            android:paddingRight="@dimen/titleCardCornerRadius"
+            android:text="Replied"
+            android:textColor="@color/cpb_white"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:includeFontPadding="false"
+            android:text="09/05/2018 at 02:57:33 PM"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQRYid" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:fontFamily="@font/setpoppins"
+            android:maxLines="3"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/mediumTextSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeStamp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="..More"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQry" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintGuide_percent="0.02" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

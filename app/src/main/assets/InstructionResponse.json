@@ -1,0 +1,41 @@
+{
+  "data_to_show_for": "G1",
+  "instructions": [
+    {
+      "Srno": 1,
+      "Grade": "G1",
+      "Designation": "Android Engineer",
+      "InstructionText": "Note that only {1} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    },
+    {
+      "Srno": 2,
+      "Grade": "G1",
+      "Designation": "Engineer",
+      "InstructionText": "Note that only {2} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    },
+    {
+      "Srno": 3,
+      "Grade": "G2",
+      "Designation": "Android Engineer",
+      "InstructionText": "Note that only {3} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    },
+    {
+      "Srno": 4,
+      "Grade": "G1",
+      "Designation": "Android Engineer",
+      "InstructionText": "Note that only {4} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    },
+    {
+      "Srno": 5,
+      "Grade": "G3",
+      "Designation": "Android Engineer",
+      "InstructionText": "Note that only {5} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    },
+    {
+      "Srno": 6,
+      "Grade": "G2",
+      "Designation": "Android Engineer",
+      "InstructionText": "Note that only {6} are eligible for Group Health Insurance Benefits.You can add, modify or delete your dependant details during the Enrollment Open Enrollment Window period.Modifications of only Spouse and Children information is permitted in Step 2."
+    }
+  ]
+}

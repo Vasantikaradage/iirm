@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/icon_color" />
+
+
+    <SearchView
+        android:id="@+id/hospital_search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/material_size_12"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/cancelCard"
+        android:background="@drawable/top_grad"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="@string/search_hospital_query"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cancelCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/hospital_search_view"
+        android:layout_alignEnd="@+id/hospital_filter_layout"
+        android:layout_alignBottom="@id/hospital_search_view"
+        android:minWidth="60dp"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/material_size_8"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/light_grey"
+        app:strokeWidth="1.2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/material_size_6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/setpoppins"
+                android:maxLines="1"
+                android:text="Close" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hospital_search_view"
+        android:layout_marginBottom="@dimen/cardMargin"
+        android:gravity="center"
+        android:text="OR"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/mediumTextSize"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:layout_marginBottom="@dimen/cardBottomMargin"
+        android:background="@drawable/ripple_effect_button"
+        android:fontFamily="@font/setpoppins"
+        android:gravity="center"
+        android:text="@string/lblnearbyhosp"
+        android:textColor="@color/cpb_white"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/hospital_filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hospital_search_view"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/material_size_12"
+        android:layout_marginEnd="@dimen/right_margin"
+        android:animateLayoutChanges="true"
+        android:paddingBottom="@dimen/cardMargin"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_hospital_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblhospCount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/title_back"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="center_vertical"
+                android:padding="@dimen/cardMargin"
+                android:paddingStart="@dimen/cardLeftMargin"
+                android:text="@string/lblhospCount"
+                android:textColor="@color/label_color"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hospCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:fontFamily="@font/setpoppins"
+                android:textColor="@color/label_color"
+                android:textSize="@dimen/mediumTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/lblhospCount"
+                app:layout_constraintRight_toRightOf="@id/lblhospCount"
+                app:layout_constraintTop_toTopOf="@id/lblhospCount" />
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/lblhospCount">
+
+                <LinearLayout
+                    android:id="@+id/llPrimary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/cardMargin"
+                    android:paddingBottom="@dimen/cardMargin"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/priCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="0"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Primary"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/title_back" />
+
+                <LinearLayout
+                    android:id="@+id/llSecondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/cardMargin"
+                    android:paddingBottom="@dimen/cardMargin"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/secCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="0"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Secondary"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/title_back" />
+
+                <LinearLayout
+                    android:id="@+id/llTertiary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/cardMargin"
+                    android:paddingBottom="@dimen/cardMargin"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/terCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="0"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTertiary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Tertiary"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/title_back" />
+
+                <LinearLayout
+                    android:id="@+id/llOther"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/cardMargin"
+                    android:paddingBottom="@dimen/cardMargin"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/otherCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="0"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hospital_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hospital_filter_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_network_provider" />
+
+
+    <RelativeLayout
+        android:id="@+id/empty_hospitals_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/no_hospitals_found_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_hospital"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/background" />
+
+        <TextView
+            android:id="@+id/no_hospital_found_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_hospitals_found_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/material_size_24"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:text="No Hospital found"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

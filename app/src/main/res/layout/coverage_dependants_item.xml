@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/cardLeftMargin"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="@dimen/cardLeftMargin"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gender_image"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/cardLeftMargin"
+            android:layout_marginTop="@dimen/cardLeftMargin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/women" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cardLeftMargin"
+            android:layout_marginEnd="@dimen/cardMargin"
+            android:fontFamily="@font/setpoppins_medium"
+            android:includeFontPadding="false"
+            android:text="Rahul Subramaniam Jayasurya"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/mediumTextSize"
+            app:layout_constraintLeft_toRightOf="@id/gender_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gender_image"
+            tools:text="@tools:sample/full_names" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cardLeftMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="Employee"
+            android:textColor="@color/label_color"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/gender_image"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_size_6"
+            android:background="@drawable/dependant_bottom_bg"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/layoutPadding"
+            android:paddingBottom="@dimen/layoutPadding"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/gender_image"
+            tools:layout_editor_absoluteX="2dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/relation">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="@string/DOB"
+                    android:textColor="@color/label_color"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="21-Jan-2018"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/mediumTextSize"
+                    tools:text="@tools:sample/date/ddmmyy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/cardMargin"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/relation">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="@string/lblAge"
+                    android:textColor="@color/label_color"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintLeft_toRightOf="@id/gender_image"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="20yrs"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/mediumTextSize"
+                    app:layout_constraintLeft_toRightOf="@id/gender_image"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

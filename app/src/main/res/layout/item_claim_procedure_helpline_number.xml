@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/claims_procedure_emergency_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/setpoppins"
+        android:justificationMode="inter_word"
+        android:padding="@dimen/material_size_12"
+        android:textColorLink="@color/cpb_blue"
+        tools:text="@tools:sample/lorem" />
+
+</RelativeLayout>

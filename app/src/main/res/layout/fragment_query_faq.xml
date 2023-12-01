@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insurance.queries.ui.QueryFaqFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/const1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardBottomMargin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/cardBottomMargin"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/spnQuery">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/My_Coverages_Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin"
+                android:layout_marginEnd="@dimen/right_margin"
+                android:background="@drawable/inst_shadow"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="@dimen/cardLeftMargin"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/imgInst"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/colored_round"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/setpoppins"
+                            android:includeFontPadding="false"
+                            android:text="i"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/cardMargin"
+                        android:layout_toRightOf="@id/imgInst"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Instructions"
+                        android:textColor="@color/gradient_start" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/ic_edit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:animateLayoutChanges="true"
+                        android:background="@color/transparent"
+                        android:rotation="0"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/arrow" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgInst"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/cardMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:fontFamily="@font/setpoppins"
+                            android:includeFontPadding="false"
+                            android:text="@string/empQueryInst"
+                            android:textColor="@color/cpb_grey" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:background="@color/grey_back_color" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/cardMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:fontFamily="@font/setpoppins"
+                            android:includeFontPadding="false"
+                            android:text="@string/file_size"
+                            android:textColor="@color/cpb_grey" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:background="@color/grey_back_color" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/cardMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:layout_marginBottom="@dimen/cardMargin"
+                            android:fontFamily="@font/setpoppins"
+                            android:includeFontPadding="false"
+                            android:text="Max 5 Files can be attached"
+                            android:textColor="@color/cpb_grey" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/spinnerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:background="@drawable/spinnerbackground"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    style="@style/SpinnerTheme3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:id="@+id/change_image_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/material_size_8"
+                    android:src="@drawable/ic_drop_down"
+                    app:tint="@color/grey1" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/errorSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/setpoppins"
+                android:text="@string/please_select_one"
+                android:textColor="@color/cpb_red"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/faq_query_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="12"
+                tools:listitem="@layout/item_query_faq" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_shadow"
+        android:elevation="@dimen/cardBottomMargin"
+        android:padding="@dimen/cardMargin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/gradient_start" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoadingMSg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_bar"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="Loading..Please Wait" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newQueryFaqFab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/material_size_12"
+        android:background="@drawable/fab_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_add" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

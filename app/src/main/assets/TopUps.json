@@ -1,0 +1,121 @@
+{
+  "SumInsuredData": {
+    "Enroll_Topup_Options": {
+      "TopupApplicability_data": {
+        "GMCTopup": "YES",
+        "GPATopup": "YES",
+        "GTLTopup": "YES"
+      },
+      "TopupSumInsured_Cls_data": {
+        "GMCTopupOptions_data": [
+          {
+            "benifits_id": "2",
+            "BASE_SI": "50,00,00",
+            "TopSumInsureds_values": [
+              {
+                "TSumInsured": "3,00,00",
+                "TSumInsured_Premium": "9,317",
+                "Opted": "YES",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "5,00,00",
+                "TSumInsured_Premium": "13,176",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "10,00,00",
+                "TSumInsured_Premium": "30,873",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "15,00,00",
+                "TSumInsured_Premium": "37,255",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              }
+            ]
+          }
+        ],
+        "GPATopupOptions_data": [
+          {
+            "benifits_id": "2",
+            "BASE_SI": "0",
+            "TopSumInsureds_values": [
+              {
+                "TSumInsured": "3,00,00",
+                "TSumInsured_Premium": "9,317",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "5,00,00",
+                "TSumInsured_Premium": "13,176",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              }
+            ]
+          }
+        ],
+        "GTLTopupOptions_data": [
+          {
+            "benifits_id": "2",
+            "BASE_SI": "300000",
+            "TopSumInsureds_values": [
+              {
+                "TSumInsured": "3,00,00",
+                "TSumInsured_Premium": "9,317",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "5,00,00",
+                "TSumInsured_Premium": "13,176",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              },
+              {
+                "TSumInsured": "5,00,00",
+                "TSumInsured_Premium": "13,176",
+                "Opted": "NO",
+                "Premium_to_show": "1",
+                "Employee_contribution": "1",
+                "Employer_contribution": "1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "message": {
+      "Message": "Topup Details found",
+      "Status": true
+    }
+  },
+  "IsEnrollmentSaved": 0,
+  "IsWindowPeriodOpen": 0,
+  "ExtGroupSrNo": 4,
+  "message": {
+    "Message": "DATA FOUND SUCCESSFULLY",
+    "Status": true,
+    "ResponseData": null
+  }
+}

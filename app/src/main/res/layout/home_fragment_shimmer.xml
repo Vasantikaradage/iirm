@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:shimmer_auto_start="true"
+        app:shimmer_duration="2000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/policy_selection_layout"
+                android:layout_marginTop="10dp"
+                android:background="#dddddd"
+                android:visibility="visible" />
+
+            <HorizontalScrollView
+                android:id="@+id/mdtp_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                tools:ignore="MissingPrefix">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="180dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:strokeColor="@color/light_grey"
+                            app:strokeWidth="0.8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="5dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/item_dashboard_image_variant"
+                                    android:layout_width="23dp"
+                                    android:layout_height="24dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:tint="@color/light_grey"
+                                    app:srcCompat="@drawable/insurance" />
+
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/item_dashboard_image_variant"
+                                    android:background="@color/light_grey"
+                                    android:padding="3dp" />
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+                    <!-- </RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="180dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:strokeColor="@color/light_grey"
+                            app:strokeWidth="0.8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="5dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/item_wellness"
+                                    android:layout_width="23dp"
+                                    android:layout_height="24dp"
+
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:tint="@color/light_grey"
+                                    app:srcCompat="@drawable/wellness" />
+
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/item_wellness"
+                                    android:background="@color/light_grey"
+                                    android:padding="3dp" />
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="180dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:strokeColor="@color/light_grey"
+                            app:strokeWidth="0.8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="5dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/item_fitness"
+                                    android:layout_width="23dp"
+                                    android:layout_height="24dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:tint="@color/light_grey"
+                                    app:srcCompat="@drawable/ic_fitness" />
+
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/item_fitness"
+                                    android:background="@color/light_grey"
+                                    android:padding="3dp" />
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/policy_selection_layout"
+                android:background="#dddddd"
+                android:visibility="visible" />
+
+            <!--policy selector shimmer-->
+            <LinearLayout
+                android:id="@+id/policy_selection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/material_size_6"
+                android:weightSum="6">
+
+                <!-- CHIP POLICY -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/material_size_2"
+                    android:layout_marginVertical="@dimen/material_size_6"
+                    android:layout_weight="3"
+                    android:background="@drawable/chips_background"
+                    android:padding="@dimen/material_size_4">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@color/light_grey" />
+
+
+                </RelativeLayout>
+
+                <!-- CHIP GHI -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/material_size_2"
+                    android:layout_marginVertical="@dimen/material_size_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/chips_background"
+                    android:padding="@dimen/material_size_6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="GHI" />
+
+                </RelativeLayout>
+                <!-- CHIP GPA -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/material_size_2"
+                    android:layout_marginVertical="@dimen/material_size_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/chips_background"
+                    android:padding="@dimen/material_size_6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="GPA" />
+
+                </RelativeLayout>
+                <!-- CHIP GTL -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/material_size_2"
+                    android:layout_marginVertical="@dimen/material_size_6"
+                    android:layout_weight="1"
+                    android:background="@drawable/chips_background"
+                    android:padding="@dimen/material_size_6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="GTL" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--view-->
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/policy_selection_layout"
+                android:background="#dddddd"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/title_menu" />
+
+            <!--Enrollment Window Card-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEnroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/material_size_12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                app:strokeColor="@color/light_grey"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentBottom="true"
+                            android:alpha="0.2"
+                            android:paddingEnd="10dp"
+                            android:scaleX="1.77"
+                            android:scaleY="1.77"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_clock_01" />
+
+                        <View
+                            android:id="@+id/enrollmsg"
+                            android:layout_width="200dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="@dimen/cardLeftMargin"
+                            android:layout_marginEnd="@dimen/cardLeftMargin"
+                            android:background="@color/light_grey"
+                            android:fontFamily="@font/setpoppins_medium"
+                            android:text="Enrollment Window"
+                            android:textColor="@color/light_grey"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@id/enrollmsg"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/cardLeftMargin"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/light_grey"
+                            android:fontFamily="@font/setpoppins_medium"
+                            android:text="CLOSED"
+                            android:visibility="visible"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/enrollmsg" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/material_size_12"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/daycount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="00"
+                                android:textColor="@color/white"
+                                android:textSize="80sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.2"
+                                android:text="Days Left"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/daycount"
+                                app:layout_constraintLeft_toLeftOf="@+id/daycount"
+                                app:layout_constraintRight_toRightOf="@+id/daycount" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/cardLeftMargin"
+                            android:src="@drawable/ic_dependants_icon"
+                            android:tint="@color/light_grey"
+                            android:visibility="visible"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bottomtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="@dimen/cardLeftMargin"
+                            android:fontFamily="@font/setpoppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Add Dependant"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/cardMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:layout_marginBottom="@dimen/cardLeftMargin"
+                            android:layout_toEndOf="@+id/bottomtxt"
+                            android:src="@drawable/add_white"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/bottomtxt"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/cardEnroll"
+                android:background="#dddddd"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/title_menu" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_4"
+                    app:cardCornerRadius="@dimen/card_corner_radius_half"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/item_coverage_icon"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/ic_coverage_icon" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_toEndOf="@id/item_coverage_icon"
+                            android:orientation="vertical">
+                            <View
+                                android:id="@+id/item_dashboard_text_variant"
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/item_dashboard_text_variant"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_below="@id/item_dashboard_text_variant"
+                                android:layout_marginTop="@dimen/material_size_2"
+                                android:layout_marginEnd="@dimen/material_size_12"
+                                android:background="@color/light_grey"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_4"
+                    app:cardCornerRadius="@dimen/card_corner_radius_half"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/item_dashboard_image_variant_1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/networkhospital" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_toEndOf="@id/item_dashboard_image_variant_1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/item_dashboard_text_variant_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/item_dashboard_text_variant_1"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_below="@id/item_dashboard_text_variant_1"
+                                android:layout_marginTop="@dimen/material_size_2"
+                                android:layout_marginEnd="@dimen/material_size_12"
+                                android:background="@color/light_grey"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_4"
+                    app:cardCornerRadius="@dimen/card_corner_radius_half"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/item_dashboard_image_variant_3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/myclaims" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_toEndOf="@id/item_dashboard_image_variant_3"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/item_dashboard_text_variant_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/item_dashboard_text_variant_3"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_below="@id/item_dashboard_text_variant_3"
+                                android:layout_marginTop="@dimen/material_size_2"
+                                android:layout_marginEnd="@dimen/material_size_12"
+                                android:background="@color/light_grey"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_4"
+                    app:cardCornerRadius="@dimen/card_corner_radius_half"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/item_dashboard_image_variant_4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/myquery" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_toEndOf="@id/item_dashboard_image_variant_4"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/item_dashboard_text_variant_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/item_dashboard_text_variant_4"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_below="@id/item_dashboard_text_variant_4"
+                                android:layout_marginTop="@dimen/material_size_2"
+                                android:layout_marginEnd="@dimen/material_size_12"
+                                android:background="@color/light_grey"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/claimprocedure" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/light_grey" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/textSize"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/intimateclaim" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/light_grey" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/textSize"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/policyfeature" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/light_grey" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/textSize"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_8"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:strokeColor="@color/light_grey"
+                    app:strokeWidth="0.8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="@dimen/cardLeftMargin"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:tint="@color/light_grey"
+                            app:srcCompat="@drawable/faq" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/light_grey" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/setpoppins_medium"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/textSize"
+                                android:visibility="gone"
+                                tools:text="Employee" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </GridLayout>
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

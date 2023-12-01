@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MB360" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/gradient_start</item>
+        <item name="colorPrimaryVariant">@color/gradient_start</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gradient_start</item>
+        <item name="colorSecondaryVariant">@color/gradient_start</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/icon_color</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <!--For splash screen!-->
+    <style name="Theme.MB360.Starting" parent="Theme.MB360">
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/white</item>
+        <item name="android:windowSplashscreenContent">@drawable/iirm</item>
+        <item name="postSplashScreenTheme">@style/Theme.MB360</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.MB360.Login" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorPrimary">@color/second_variant_blue</item>
+        <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+    </style>
+
+
+    <style name="BottomNavigationViewTextStyle" parent="Theme.MaterialComponents">
+        <item name="android:fontFamily">@font/setpoppins</item>
+        <item name="android:textColor">@color/gradient_start</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyleInactive" parent="Theme.MaterialComponents">
+        <item name="android:fontFamily">@font/setpoppins</item>
+        <item name="android:textColor">@color/grey1</item>
+    </style>
+
+    <style name="Widget.App.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorPrimaryInverse">@color/white</item>
+        <item name="colorOnSurfaceInverse">@color/error_text_snack_bar</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="right_margin">15dp</dimen>
+    <dimen name="largeTextSize">18sp</dimen>
+    <dimen name="cardTopMargin">20dp</dimen>
+    <dimen name="contactIconSize">24dp</dimen>
+    <dimen name="cardMargin">7dp</dimen>
+    <dimen name="titleCardCornerRadius">10dp</dimen>
+    <dimen name="toolbarIconSize">28dp</dimen>
+    <dimen name="cardLeftMargin">15dp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="cardElevation">8dp</dimen>
+    <dimen name="layoutPadding">5dp</dimen>
+    <dimen name="mediumTextSize">15sp</dimen>
+    <dimen name="cardBottomMargin">18dp</dimen>
+    <dimen name="twodp">2dp</dimen>
+    <dimen name="policyHeight">60dp</dimen>
+    <dimen name="material_size_12">12dp</dimen>
+    <dimen name="headerTextSize">14sp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="material_size_4">4dp</dimen>
+    <dimen name="badge_text_size">12sp</dimen>
+    <dimen name="left_margin">15dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>
+    <dimen name="walkthroughtextsize">17sp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="material_size_6">6dp</dimen>
+</resources>

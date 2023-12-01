@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollProfile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    tools:context="com.indiainsure.android.MB360.insurance.profile.ui.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:animateLayoutChanges="true">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/gradient"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <!-- TODO: Circular ImageView -->
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:strokeColor="@color/grey2"
+                app:strokeWidth="2dp"
+                tools:src="@drawable/user_male" />
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:textColor="@color/cpb_black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userImage"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/txtdesignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="@string/username"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <!--EMAIL-->
+
+                <RelativeLayout
+                    android:id="@+id/const2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardTopMargin"
+                    android:layout_marginTop="@dimen/cardTopMargin"
+                    android:layout_marginEnd="@dimen/cardTopMargin"
+                    android:layout_marginBottom="@dimen/cardBottomMargin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/card_shadow"
+                    app:layout_constraintTop_toBottomOf="@id/txtdesignation">
+
+                    <RelativeLayout
+                        android:id="@+id/profile_email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/cardLeftMargin">
+
+                        <ImageView
+                            android:id="@+id/ic_email"
+                            android:layout_width="25dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/email" />
+
+                        <View
+                            android:id="@+id/lblGeneral"
+                            android:layout_width="1sp"
+                            android:layout_height="25sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/cardTopMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:layout_marginBottom="@dimen/cardMargin"
+                            android:layout_toEndOf="@id/ic_email"
+                            android:background="@color/dark_grey"
+                            android:padding="3sp"
+                            android:textColor="@color/btnColor"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/cardLeftMargin"
+                            android:layout_toEndOf="@id/lblGeneral"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="@string/email_label"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/mediumTextSize" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <!--DOB-->
+                <RelativeLayout
+                    android:id="@+id/const5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardTopMargin"
+                    android:layout_marginTop="@dimen/cardBottomMargin"
+                    android:layout_marginEnd="@dimen/cardTopMargin"
+                    android:layout_marginBottom="@dimen/cardBottomMargin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/card_shadow"
+                    app:layout_constraintBottom_toTopOf="@id/Network_Hospital_Card"
+                    app:layout_constraintTop_toBottomOf="@id/const2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="@dimen/cardLeftMargin">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_bday"
+                            android:layout_width="30dp"
+                            android:layout_height="@dimen/contactIconSize"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/dob" />
+
+                        <View
+                            android:id="@+id/lbl"
+                            android:layout_width="1sp"
+                            android:layout_height="25sp"
+                            android:layout_marginStart="@dimen/cardLeftMargin"
+                            android:layout_marginTop="@dimen/cardMargin"
+                            android:layout_marginBottom="@dimen/cardMargin"
+                            android:layout_toEndOf="@id/ic_bday"
+                            android:background="@color/dark_grey"
+                            android:padding="3sp"
+                            android:text="General"
+                            android:textColor="@color/btnColor"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblBirth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/cardLeftMargin"
+                            android:layout_toRightOf="@id/lbl"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:padding="3sp"
+                            android:text="@string/DOB"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/mediumTextSize" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/Network_Hospital_Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardTopMargin"
+                    android:layout_marginEnd="@dimen/cardTopMargin"
+                    android:layout_marginBottom="@dimen/cardTopMargin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/card_shadow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/const5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:padding="@dimen/cardLeftMargin">
+
+                        <RelativeLayout
+                            android:id="@+id/const8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ic_personal"
+                                android:layout_width="30dp"
+                                android:layout_height="@dimen/contactIconSize"
+                                android:layout_centerVertical="true"
+                                android:scaleType="fitCenter"
+
+                                app:srcCompat="@drawable/user" />
+
+                            <View
+                                android:id="@+id/lbl2"
+                                android:layout_width="1sp"
+                                android:layout_height="25sp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/cardLeftMargin"
+                                android:layout_marginTop="@dimen/cardMargin"
+                                android:layout_marginBottom="@dimen/cardMargin"
+                                android:layout_toRightOf="@id/ic_personal"
+                                android:background="@color/dark_grey"
+                                android:padding="3sp"
+                                android:text="General"
+                                android:textColor="@color/btnColor"
+                                android:textSize="@dimen/headerTextSize"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblUser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/cardLeftMargin"
+                                android:layout_toEndOf="@id/lbl2"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:padding="3sp"
+                                android:text="Personal Information"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/mediumTextSize"
+                                android:textStyle="bold" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/ic_edit"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:animateLayoutChanges="true"
+                                android:background="@color/transparent"
+                                android:rotation="0"
+                                app:srcCompat="@drawable/arrow"
+                                android:tint="@color/icon_color"/>
+                        </RelativeLayout>
+
+                        <!-- to animate -->
+                        <LinearLayout
+                            android:id="@+id/llEditable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/const8"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/lblMob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/cardBottomMargin"
+                                android:background="@drawable/nhborder"
+                                android:enabled="false"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_vertical"
+                                android:hint="@string/mobile_number"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:padding="@dimen/headerTextSize"
+                                android:textColor="@color/cpb_black"
+                                android:textSize="@dimen/textSize" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/lblPEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/cardTopMargin"
+                                android:background="@drawable/nhborder"
+                                android:enabled="false"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_vertical"
+                                android:hint="@string/pers_email"
+                                android:padding="@dimen/headerTextSize"
+                                android:textColor="@color/cpb_black"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/lblContact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/cardTopMargin"
+                                android:background="@drawable/nhborder"
+                                android:enabled="false"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_vertical"
+                                android:hint="@string/cont_details"
+                                android:padding="@dimen/headerTextSize"
+                                android:textColor="@color/cpb_black"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/lblRelation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/cardTopMargin"
+                                android:background="@drawable/nhborder"
+                                android:enabled="false"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_vertical"
+                                android:hint="@string/emer_relation"
+                                android:padding="@dimen/headerTextSize"
+                                android:textColor="@color/cpb_black"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/lblAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/cardTopMargin"
+                                android:layout_marginBottom="@dimen/cardMargin"
+                                android:background="@drawable/nhborder"
+                                android:enabled="false"
+                                android:fontFamily="@font/poppins"
+                                android:hint="@string/address"
+                                android:maxLines="5"
+                                android:minHeight="40sp"
+                                android:padding="@dimen/headerTextSize"
+                                android:textColor="@color/cpb_black"
+                                android:textSize="@dimen/textSize" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <!--DOCUMENTS-->
+                <FrameLayout
+                    android:id="@+id/documents_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardTopMargin"
+                    android:layout_marginEnd="@dimen/cardTopMargin"
+                    android:layout_marginBottom="@dimen/cardTopMargin"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    android:background="@drawable/card_shadow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/const5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:padding="@dimen/cardLeftMargin">
+
+                        <RelativeLayout
+                            android:id="@+id/const9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ic_personal_document"
+                                android:layout_width="30dp"
+                                android:layout_height="@dimen/contactIconSize"
+                                android:layout_centerVertical="true"
+                                android:scaleType="fitCenter"
+                                app:tint="@color/icon_color"
+                                app:srcCompat="@drawable/user" />
+
+                            <View
+                                android:id="@+id/lbl3"
+                                android:layout_width="1sp"
+                                android:layout_height="25sp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/cardLeftMargin"
+                                android:layout_marginTop="@dimen/cardMargin"
+                                android:layout_marginBottom="@dimen/cardMargin"
+                                android:layout_toRightOf="@id/ic_personal_document"
+                                android:background="@color/dark_grey"
+                                android:padding="3sp"
+                                android:text="General"
+                                android:textColor="@color/btnColor"
+                                android:textSize="@dimen/headerTextSize"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblUser_document"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/cardLeftMargin"
+                                android:layout_toEndOf="@id/lbl3"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:padding="3sp"
+                                android:text="Personal Details"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/mediumTextSize"
+                                android:textStyle="bold" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/ic_edit_document"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:animateLayoutChanges="true"
+                                android:background="@color/transparent"
+                                android:rotation="0"
+                                app:srcCompat="@drawable/arrow" />
+                        </RelativeLayout>
+
+                        <!-- to animate -->
+                        <LinearLayout
+                            android:id="@+id/llEditable_document"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/const9"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/document_cycle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="3"
+                                tools:listitem="@layout/documents_item" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/logoutbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/layoutPadding"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:background="@drawable/card_shadow"
+                    android:enabled="true"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="5"
+                    android:minHeight="40sp"
+
+                    android:padding="@dimen/headerTextSize"
+                    android:text="Logout"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="@dimen/textSize"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

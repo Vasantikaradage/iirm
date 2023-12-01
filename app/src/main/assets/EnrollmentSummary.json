@@ -1,0 +1,41 @@
+{
+  "Summary": {
+    "data": [
+      {
+        "max_wallet_amount": "10,00,000",
+        "sodexo_amount": "40,00,000",
+        "gmc_base_si": "5,00,000",
+        "gmc_topup_si": "15,00,000",
+        "gmc_total_si": "",
+        "gpa_base_si": "1,31,66,370",
+        "gpa_topup_si": "75,00,000",
+        "gpa_total_si": "",
+        "gtl_base_si": "63,66,924",
+        "gtl_topup_si": "75,00,000",
+        "gtl_total_si": "",
+        "parent_1": "",
+        "parent_1_premium": "3,00,000",
+        "parent_2": "",
+        "parent_2_premium": "3,00,000",
+        "gmc_topup_premium": "21,612",
+        "gpa_topup_premium": "2,622",
+        "gtl_topup_premium": "7,457",
+        "wallet_amount_used": "20,000",
+        "wallet_amount_available": "98,00,000",
+        "payroll_amount_used": "5,000",
+        "total_premium": "1,51,300",
+        "no_of_installments": "4",
+        "confirmation_date": "9-Sep-2022",
+        "gmc_base_si_parent_set1": "3,00,000",
+        "gmc_base_si_parent_set2": "3,00,000",
+        "extra_premium": "",
+        "payroll_amount_used_Int": 0,
+        "total_premium_Int": 151300
+      }
+    ]
+  },
+  "message": {
+    "Message": "DATA FOUND SUCCESSFULLY",
+    "Status": true
+  }
+}

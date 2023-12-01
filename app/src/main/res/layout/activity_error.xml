@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utilities.error.ErrorActivity">
+
+
+    <ImageView
+        android:id="@+id/error_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/error_state" />
+
+    <TextView
+        android:id="@+id/error_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="@dimen/material_size_12"
+        android:fontFamily="@font/setpoppinssemibold"
+        android:text="Something went wrong!"
+        android:textColor="@color/dark_grey"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/error_description_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/material_size_24"
+        android:layout_marginTop="@dimen/material_size_4"
+        android:fontFamily="@font/setpoppins_medium"
+        android:gravity="center"
+        android:text="Sorry, there appears to be an error loading the data. Please try re-login the app or try again later. If you are logging in for the first time please make sure that you log into the web portal first."
+        android:textColor="@color/dark_grey"
+        android:textSize="15sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/try_again_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/material_size_24"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/roundedsquare"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/re_fresh_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_try_again"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/re_fresh_image"
+                android:fontFamily="@font/setpoppinssemibold"
+                android:text="Relogin now"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

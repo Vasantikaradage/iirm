@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insurance.claimsprocedure.ClaimsProcedureFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/policy_selection_layout_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/policy_selection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_menu"
+                    android:layout_marginHorizontal="12dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/material_size_6"
+                    android:weightSum="6">
+
+                    <!-- CHIP POLICY -->
+                    <RelativeLayout
+                        android:id="@+id/select_policy_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="3"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_4">
+
+                        <TextView
+                            android:id="@+id/selected_policy_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="@dimen/material_size_2"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/setpoppins"
+                            android:maxLines="1"
+                            android:textColor="@color/label_color"
+                            app:drawableStartCompat="@drawable/ic_sort"
+                            tools:text="POLICY NUMBER" />
+
+                    </RelativeLayout>
+
+                    <!-- CHIP GHI -->
+                    <RelativeLayout
+                        android:id="@+id/ghi_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background_selected"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/ghi_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GHI" />
+
+                    </RelativeLayout>
+                    <!-- CHIP GPA -->
+                    <RelativeLayout
+                        android:id="@+id/gpa_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/gpa_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GPA" />
+
+                    </RelativeLayout>
+                    <!-- CHIP GTL -->
+                    <RelativeLayout
+                        android:id="@+id/gtl_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/gtl_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GTL" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/tabs"
+                layout="@layout/view_pager_tab_layout"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/claims_procedure_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/policy_selection_layout_holder">
+
+                <!-- Cashless/reimbursement card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gmc_steps_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginEnd="@dimen/material_size_12"
+                    app:cardCornerRadius="@dimen/material_size_12"
+                    app:cardElevation="@dimen/card_elevation">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_size_8"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/cashless_steps_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/roundedsquare"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/material_size_16">
+
+                            <TextView
+                                android:id="@+id/cashless_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cashless"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/reimbursement_steps_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/material_size_16">
+
+                            <TextView
+                                android:id="@+id/reimbursement_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Reimbursement" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- steps images card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/steps_image_card_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gmc_steps_toggle"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/material_size_12"
+                    android:layout_marginEnd="@dimen/material_size_12"
+                    app:cardCornerRadius="@dimen/material_size_12"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/claims_procedure_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/material_size_8"
+                            tools:src="@tools:sample/avatars" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- txt file layout -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/steps_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/steps_image_card_holder"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginTop="@dimen/material_size_12"
+                    android:layout_marginEnd="@dimen/material_size_12"
+                    android:layout_marginBottom="@dimen/material_size_12"
+                    app:cardCornerRadius="@dimen/material_size_12"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <!--     <WebView
+                             android:id="@+id/claims_steps_text"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content" /> -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_size_8"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/steps_image"
+                            android:layout_width="@dimen/material_size_24"
+                            android:layout_height="@dimen/material_size_24"
+                            android:layout_alignTop="@id/claim_procedure_steps_header"
+                            android:layout_alignBottom="@id/claim_procedure_steps_header"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/material_size_12"
+                            android:layout_marginEnd="@dimen/material_size_4"
+                            android:src="@drawable/ic_claim_steps"
+                            app:tint="@color/icon_color" />
+
+                        <TextView
+                            android:id="@+id/claim_procedure_steps_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/steps_image"
+                            android:fontFamily="@font/setpoppinssemibold"
+                            android:paddingVertical="@dimen/material_size_12"
+                            android:textAllCaps="true"
+                            android:textColor="@color/label_color"
+                            android:textColorLink="@color/cpb_blue"
+                            android:textSize="16sp"
+                            tools:text="@tools:sample/lorem" />
+
+                        <View
+                            android:id="@+id/claim_procedure_instructions_seperator"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/claim_procedure_steps_header"
+                            android:layout_marginHorizontal="@dimen/material_size_12"
+                            android:background="@color/title_back" />
+
+                        <!--       <TextView
+                                   android:id="@+id/claim_procedure_instructions"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_below="@id/claim_procedure_instructions_seperator"
+                                   android:layout_centerHorizontal="true"
+                                   android:fontFamily="@font/setpoppins"
+                                   android:justificationMode="inter_word"
+                                   android:padding="@dimen/material_size_12"
+                                   android:textColor="@color/text_color"
+                                   android:textColorLink="@color/cpb_blue"
+                                   tools:text="@tools:sample/lorem" /> -->
+
+                        <WebView
+                            android:id="@+id/claims_steps_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/claim_procedure_instructions_seperator" />
+
+                        <ViewStub
+                            android:id="@+id/no_steps_found"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/claim_procedure_instructions_seperator"
+                            android:layout_margin="@dimen/material_size_12"
+                            android:inflatedId="@+id/inflatedviewsub"
+                            android:layout="@layout/no_steps_found_layout"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- additional txt file layout -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/additional_steps_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/steps_card"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginEnd="@dimen/material_size_12"
+                    android:layout_marginBottom="@dimen/material_size_12"
+                    android:visibility="visible"
+                    app:cardCornerRadius="@dimen/material_size_12"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <!--     <WebView
+                             android:id="@+id/claims_steps_text"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content" /> -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_size_8"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/additional_steps_image"
+                            android:layout_width="@dimen/material_size_24"
+                            android:layout_height="@dimen/material_size_24"
+                            android:layout_alignTop="@id/additional_claim_procedure_steps_header"
+                            android:layout_alignBottom="@id/additional_claim_procedure_steps_header"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/material_size_12"
+                            android:layout_marginEnd="@dimen/material_size_4"
+                            app:tint="@color/icon_color"
+                            android:src="@drawable/ic_claim_steps" />
+
+                        <TextView
+                            android:id="@+id/additional_claim_procedure_steps_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/additional_steps_image"
+                            android:fontFamily="@font/setpoppinssemibold"
+                            android:paddingVertical="@dimen/material_size_12"
+                            android:text="@string/additional_instructions"
+                            android:textAllCaps="true"
+                            android:textColor="@color/label_color"
+                            android:textColorLink="@color/cpb_blue"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/additional_claim_procedure_instructions_seperator"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/additional_claim_procedure_steps_header"
+                            android:layout_marginHorizontal="@dimen/material_size_12"
+                            android:background="@color/title_back" />
+
+                        <!--       <TextView
+                                   android:id="@+id/claim_procedure_instructions"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_below="@id/claim_procedure_instructions_seperator"
+                                   android:layout_centerHorizontal="true"
+                                   android:fontFamily="@font/setpoppins"
+                                   android:justificationMode="inter_word"
+                                   android:padding="@dimen/material_size_12"
+                                   android:textColor="@color/text_color"
+                                   android:textColorLink="@color/cpb_blue"
+                                   tools:text="@tools:sample/lorem" /> -->
+
+                        <WebView
+                            android:id="@+id/additional_claims_steps_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/additional_claim_procedure_instructions_seperator" />
+
+                        <ViewStub
+                            android:id="@+id/additional_no_steps_found"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/additional_claim_procedure_instructions_seperator"
+                            android:layout_margin="@dimen/material_size_12"
+                            android:inflatedId="@+id/inflatedviewsub"
+                            android:layout="@layout/no_instruction_found_layout"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Emergency contact number layout -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/emergency_contact_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/additional_steps_card"
+                    android:layout_marginStart="@dimen/material_size_12"
+                    android:layout_marginEnd="@dimen/material_size_12"
+                    android:layout_marginBottom="@dimen/material_size_12"
+                    app:cardCornerRadius="@dimen/material_size_12"
+                    app:cardElevation="@dimen/card_elevation">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/material_size_8">
+
+
+                        <ImageView
+                            android:id="@+id/image_headphones"
+                            android:layout_width="@dimen/material_size_24"
+                            android:layout_height="24dp"
+                            android:layout_alignTop="@id/header_emergency_contact"
+                            android:layout_alignBottom="@id/header_emergency_contact"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/material_size_12"
+                            android:layout_marginEnd="@dimen/material_size_4"
+                            app:tint="@color/icon_color"
+                            android:contentDescription="@string/emergency_contact_number"
+                            android:src="@drawable/ic_head_phones" />
+
+                        <TextView
+                            android:id="@+id/header_emergency_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/image_headphones"
+                            android:fontFamily="@font/setpoppinssemibold"
+                            android:paddingVertical="@dimen/material_size_12"
+                            android:text="Helpline No's"
+                            android:textAllCaps="true"
+                            android:textColor="@color/label_color"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/emergency_contact_header_seperator"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/header_emergency_contact"
+                            android:layout_marginHorizontal="@dimen/material_size_12"
+                            android:background="@color/title_back" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/claim_procedures_helpline_cycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/emergency_contact_header_seperator"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical"
+                            tools:itemCount="2"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_claim_procedure_helpline_number" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:elevation="@dimen/material_size_24"
+        android:indeterminateTint="@color/gradient_start" />
+
+
+</FrameLayout>

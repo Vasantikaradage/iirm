@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Contact" android:icon="@drawable/call" android:id="@+id/supportFragment" app:showAsAction="withText"/>
+    <item android:title="E-Card" android:icon="@drawable/ic_ecard" android:id="@+id/ecardFragment" app:showAsAction="withText" />
+    <item android:title=""   />
+    <item android:title="Utilities" android:icon="@drawable/ic_utilities" android:id="@+id/utilitiesFragment" app:showAsAction="withText"/>
+    <item android:title="More" android:icon="@drawable/ic_more" android:id="@+id/profileFragmentListService" app:showAsAction="withText" />
+
+</menu>

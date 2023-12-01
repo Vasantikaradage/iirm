@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".insurance.claims.repository.ui.NewIntimatedClaimsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/cardLeftMargin"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="@dimen/cardLeftMargin">
+
+        <RelativeLayout
+            android:id="@+id/content_claims_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/spinnerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/person_spinner"
+                    style="@style/SpinnerTheme2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/errorSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/person_spinner"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/please_select_one"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/change_image_policy"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/material_size_8"
+                    android:src="@drawable/ic_drop_down"
+                    android:visibility="gone"
+                    app:tint="@color/icon_color_primary" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/etDiagnosis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/nhborder"
+                    android:fadeScrollbars="false"
+                    android:fontFamily="@font/setpoppins"
+                    android:hint="@string/DiagnosisAilment"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxLength="4000"
+                    android:maxLines="4"
+                    android:overScrollMode="always"
+                    android:padding="@dimen/textSize"
+                    android:paddingHorizontal="@dimen/largeTextSize"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/errorDiagnosis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="4"
+                    android:text="@string/enter_diagnosis_ailment"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/etLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/nhborder"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="@dimen/small_margin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_by_rupee"
+                        app:tint="@color/background3" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEstmatedReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/setpoppins"
+                        android:hint="@string/estdtime"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:padding="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorEstdReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="4"
+                    android:text="@string/enter_estimated_reported_amount"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llDOA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/nhborder"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="@dimen/small_margin"
+                        android:src="@drawable/ic_by_date_of_birth"
+                        app:tint="@color/background3" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDOA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/setpoppins"
+                        android:hint="@string/DOA"
+                        android:inputType="date"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorDOA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="4"
+                    android:text="@string/enter_date_of_admission"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llNOH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/nhborder"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="@dimen/small_margin"
+                        android:src="@drawable/ic_hospital"
+                        app:tint="@color/background3" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNOH"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/setpoppins"
+                        android:hint="@string/NOH"
+                        android:inputType="textCapWords"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorNOH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="4"
+                    android:text="@string/enter_hospital_name"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llHospLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/nhborder"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="@dimen/small_margin"
+                        android:src="@drawable/ic_by_location"
+                        app:tint="@color/background3" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHospLoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/setpoppins"
+                        android:hint="@string/loc"
+                        android:inputType="textCapWords"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/cardMargin"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorHospLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="4"
+                    android:text="@string/enter_hospital_location"
+                    android:textColor="@color/cpb_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="@dimen/cardBottomMargin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RelativeLayout
+                        android:id="@+id/btn_intimate_now"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/roundedsquare_variant"
+                        android:orientation="vertical"
+                        tools:targetApi="p">
+
+                        <TextView
+                            android:id="@+id/next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppinssemibold"
+                            android:gravity="center"
+                            android:text="@string/intimate_now"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReset"
+                        android:layout_width="0sp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:layout_marginBottom="@dimen/cardMargin"
+                        android:layout_marginTop="@dimen/cardMargin"
+                        android:layout_weight="1"
+                        android:background="@drawable/reset"
+                        android:fontFamily="@font/setpoppins"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="@dimen/layoutPadding"
+                        android:text="@string/reset"
+                        android:textColor="@color/cpb_white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_error"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_api_error_state"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/background" />
+
+                <TextView
+                    android:id="@+id/messageTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_error"
+                    android:layout_marginVertical="6dp"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:gravity="center"
+                    android:text="@string/something_went_wrong"
+                    android:textColor="@color/background"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:id="@+id/progress_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/cardMargin"
+                android:elevation="@dimen/cardBottomMargin"
+                android:padding="@dimen/cardMargin"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/primary_variant" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLoadingMSg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/progress_bar_load"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Loading..please wait" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

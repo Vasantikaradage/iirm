@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/const1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_margin"
+    android:layout_marginEnd="@dimen/right_margin"
+    android:layout_marginBottom="@dimen/cardBottomMargin"
+    android:background="@drawable/card_shadow"
+    android:paddingStart="@dimen/cardTopMargin"
+    android:paddingTop="@dimen/cardTopMargin"
+    android:paddingEnd="@dimen/cardTopMargin"
+    android:paddingBottom="@dimen/cardBottomMargin">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/cpb_black"
+            android:textSize="@dimen/mediumTextSize"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/lvstatus"
+            android:gravity="center"
+            android:paddingStart="@dimen/cardLeftMargin"
+            android:paddingEnd="@dimen/cardLeftMargin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblName">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/setpoppins"
+                android:includeFontPadding="false"
+                android:text="Live Status"
+                android:textColor="@color/cpb_white"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/claim_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_layout"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblClaim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:text="Claim Type"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblClaimValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:gravity="left"
+                android:text="Claim Type"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintTop_toBottomOf="@id/lblClaim" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/div_grey" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardMargin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardMargin"
+                android:text="Date"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="Claim Type"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblDate" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/claim_date"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:text="Claim No"
+        android:textColor="@color/cpb_grey"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/claim_date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblNoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblNo"
+        android:fontFamily="@font/setpoppins"
+        android:gravity="left"
+        android:text="Claim Type"
+        android:textColor="@color/cpb_black"
+        android:textSize="@dimen/mediumTextSize"
+        app:layout_constraintTop_toBottomOf="@id/lblNo" />
+
+    <LinearLayout
+        android:layout_below="@+id/lblNoValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lblNoValue">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Claim Amount"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/layoutPadding"
+                    android:text="@string/rs"
+                    android:textColor="@color/cpb_black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblClaimAmtValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Claim Type"
+                    android:textColor="@color/cpb_black"
+                    android:textSize="@dimen/mediumTextSize" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/div_grey" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardMargin"
+            android:layout_marginTop="@dimen/cardMargin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Claim Status"
+                android:textColor="@color/cpb_grey"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblStatusValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/setpoppins"
+                android:text="Claim Type"
+                android:textColor="@color/cpb_black"
+                android:textSize="@dimen/mediumTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

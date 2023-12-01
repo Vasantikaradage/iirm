@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/cardMargin"
+    android:layout_marginTop="@dimen/cardMargin"
+    android:layout_marginRight="@dimen/cardMargin"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/material_size_8"
+    app:cardElevation="@dimen/card_elevation">
+
+    <RelativeLayout
+        android:id="@+id/item_policy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/policyHeight"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/title_bg_2">
+
+        <ImageView
+            android:id="@+id/pdf_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_by_pdf" />
+
+        <TextView
+            android:id="@+id/item_policy_main_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pdf_icon"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:text="Download Policy Features"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_grey_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image_download"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow"
+            app:tint="@color/black" />
+
+        <ProgressBar
+            android:id="@+id/item_download_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:indeterminateTint="@color/icon_color"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/download_animation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/download_animation" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

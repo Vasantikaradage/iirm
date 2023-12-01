@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".onboarding.authentication.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_size_64"
+        android:animateLayoutChanges="true"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/right_margin"
+            android:paddingRight="@dimen/right_margin"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/AppImage"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="@dimen/material_size_16"
+                android:scaleType="fitCenter"
+                android:src="@drawable/iirm_logo_new" />
+
+            <TextView
+                android:id="@+id/info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/material_size_16"
+                android:fontFamily="@font/setpoppins_medium"
+                android:text="Access your account securely and manage your policies with ease."
+                android:textAlignment="center"
+                android:textColor="@color/icon_color"
+                android:textSize="@dimen/material_size_16" />
+
+            <TextView
+                android:id="@+id/login_text_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="@dimen/material_size_16"
+                android:layout_marginTop="@dimen/material_size_24"
+                android:layout_marginBottom="@dimen/material_size_8"
+                android:fontFamily="@font/setpoppins_medium"
+                android:text="Login with Mobile Number"
+                android:textColor="@color/label_v2"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:animateLayoutChanges="true"
+                android:id="@+id/login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/material_size_16"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/phone_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/material_size_16"
+                    android:background="@drawable/iirm_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/material_size_16"
+                    android:paddingVertical="@dimen/material_size_8"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_call"
+                        app:tint="@color/icon_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/material_size_8"
+                        android:text="+91 "
+                        android:textColor="@color/stroke_color"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/phone_number_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="0000000000"
+                        android:inputType="phone"
+                        android:textColorHint="@color/light_hint_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/material_size_16"
+                    android:background="@drawable/iirm_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/material_size_16"
+                    android:paddingVertical="@dimen/material_size_8"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone_call"
+                        app:tint="@color/icon_color" />
+
+
+                    <EditText
+                        android:id="@+id/email_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/material_size_16"
+                        android:background="@android:color/transparent"
+                        android:hint="Official E-Mail ID"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/light_hint_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/web_credential_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/material_size_16"
+                    android:background="@drawable/iirm_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/material_size_16"
+                    android:paddingVertical="@dimen/material_size_8"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone_call"
+                        app:tint="@color/icon_color" />
+
+
+                    <EditText
+                        android:id="@+id/group_code_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/material_size_16"
+                        android:background="@android:color/transparent"
+                        android:hint="Group Code"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/light_hint_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/username_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/material_size_16"
+                    android:background="@drawable/iirm_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/material_size_16"
+                    android:paddingVertical="@dimen/material_size_8"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone_call"
+                        app:tint="@color/icon_color" />
+
+
+                    <EditText
+                        android:id="@+id/username_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/material_size_16"
+                        android:background="@android:color/transparent"
+                        android:hint="Username"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/light_hint_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/material_size_16"
+                    android:background="@drawable/iirm_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/material_size_16"
+                    android:paddingVertical="@dimen/material_size_8"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone_call"
+                        app:tint="@color/icon_color" />
+
+
+                    <EditText
+                        android:id="@+id/password_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/material_size_16"
+                        android:background="@android:color/transparent"
+                        android:hint="Password"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/light_hint_grey" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="Next"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="By proceeding, we'll send you a one-time verification code."
+                    android:textColor="@color/light_label_grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/material_size_16"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.8dp"
+                        android:layout_weight="1"
+                        android:background="@color/light_grey_separator" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/material_size_8"
+                        android:fontFamily="@font/roboto_condensed_medium"
+                        android:maxLines="1"
+                        android:text="or Sign In with"
+                        android:textColor="@color/dark_label_grey"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.8dp"
+                        android:layout_weight="1"
+                        android:background="@color/light_grey_separator" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/sign_in_mobile"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textColor="@color/light_label_grey"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/sign_in_e_mail"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Official E-mail ID"
+                    android:textColor="@color/light_label_grey" />
+
+                <Button
+                    android:id="@+id/sign_in_web_cred"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Web Credentials"
+                    android:textColor="@color/light_label_grey" />
+
+            </LinearLayout>
+
+
+            <!-- <RelativeLayout
+                 android:id="@+id/next_text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="40dp"
+                 android:layout_gravity="center"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginEnd="16dp"
+                 android:layout_marginBottom="16dp"
+                 android:animateLayoutChanges="true"
+                 android:background="@drawable/roundedsquare_variant"
+                 android:elevation="12dp"
+                 android:orientation="vertical"
+                 tools:targetApi="p">
+
+                 <TextView
+                     android:id="@+id/next"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerInParent="true"
+                     android:layout_marginHorizontal="20dp"
+                     android:fontFamily="@font/setpoppinssemibold"
+                     android:gravity="center"
+                     android:paddingHorizontal="12sp"
+                     android:paddingVertical="10sp"
+                     android:text="@string/sign_in"
+                     android:textAllCaps="true"
+                     android:textColor="@color/white"
+                     android:textStyle="bold"
+                     android:visibility="visible" />
+
+                 <ProgressBar
+                     android:id="@+id/progress_bar"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerInParent="true"
+                     android:layout_margin="5dp"
+                     android:indeterminateTint="@color/white"
+                     android:visibility="visible" />
+
+
+             </RelativeLayout>-->
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

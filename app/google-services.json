@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "828209692426",
+    "project_id": "india-insure",
+    "storage_bucket": "india-insure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828209692426:android:81e791942b4f5b7e81c4f3",
+        "android_client_info": {
+          "package_name": "com.indiainsure.android.MB360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828209692426-1jtfabr1s079tlcl4daqhime53j5ffbu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiainsure.android.MB360",
+            "certificate_hash": "14847c7e94b219bfa2ba0875b7fd96ced103480d"
+          }
+        },
+        {
+          "client_id": "828209692426-8anei3logialilv1ltr3k0fjcldt8b1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJYlydIXt1SoRpAU0eHGaViBFWOzlu_yY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828209692426-8anei3logialilv1ltr3k0fjcldt8b1t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "828209692426-2lbc98o478m39efko1idg4bkbin1heoj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thynksight.indiainsure"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

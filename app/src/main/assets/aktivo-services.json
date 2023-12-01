@@ -1,0 +1,15 @@
+{
+  "oauth_client": {
+    "client_id": "semantic",
+    "client_secret" : "47bed95c0f3df643492c5e80eabafa72ef3f3bb5259fbe4fe250b8bf03a26264"
+  },
+  "config" : {
+    "configuration_version": "1",
+    "base_url_type" : 1
+  },
+  "log_platform_config" : {
+    "base_url" : "https://56915c95d8454c61be0fc37d7eb7147f.ap-southeast-1.aws.found.io:9243/android_client_sdk_semantic_v001/",
+    "index" : "android_client_sdk_semantic_v001",
+    "api_key" : "RFZMeV8zVUJvZFl0MDRTSXJwVUI6OURUR3BzVnRRWWlDWk9vYjRuZVFQZw=="
+  }
+}

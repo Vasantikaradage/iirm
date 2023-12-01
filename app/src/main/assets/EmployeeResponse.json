@@ -1,0 +1,85 @@
+{
+  "employee_details": [
+    {
+      "Srno": "1",
+      "FIELD_NAME": "Employee Name",
+      "FIELD_VALUE": "TEST-NAME FROM SERVER",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "1",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "2",
+      "FIELD_NAME": "Grade",
+      "FIELD_VALUE": "G1",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "0",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "3",
+      "FIELD_NAME": "Age (Years)",
+      "FIELD_VALUE": "44",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "1",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "10",
+      "FIELD_NAME": "Mobile Number",
+      "FIELD_VALUE": "",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "1",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "5",
+      "FIELD_NAME": "Official E-mail Id",
+      "FIELD_VALUE": "test@gmail.com",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "0",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "6",
+      "FIELD_NAME": "Personal Information",
+      "FIELD_VALUE": "23",
+      "TO_DISPLAY": "0",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "0",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "7",
+      "FIELD_NAME": "Employee ID",
+      "FIELD_VALUE": "1234",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "8",
+      "FIELD_NAME": "Employee ID",
+      "FIELD_VALUE": "1234",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    },
+    {
+      "Srno": "9",
+      "FIELD_NAME": "Employee ID",
+      "FIELD_VALUE": "1234",
+      "TO_DISPLAY": "1",
+      "TO_EDITABLE": "0",
+      "MANDATORY": "1",
+      "TABLE_NAME": "UPDATE_EMPLOYEE_DETAILS"
+    }
+  ]
+}

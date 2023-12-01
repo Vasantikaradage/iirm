@@ -1,0 +1,24 @@
+{
+  "relations": [
+    {
+      "relation_name": "MOTHER",
+      "max_count": 1,
+      "group": "4"
+    },
+    {
+      "relation_name": "FATHER",
+      "max_count": 1,
+      "group": "4"
+    },
+    {
+      "relation_name": "MOTHER-IN-LAW",
+      "max_count": 1,
+      "group": "4"
+    },
+    {
+      "relation_name": "FATHER-IN-LAW",
+      "max_count": 1,
+      "group": "4"
+    }
+  ]
+}

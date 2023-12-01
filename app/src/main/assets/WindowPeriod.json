@@ -1,0 +1,16 @@
+{
+  "windowPeriod": {
+    "groupChildSrNo": "1024",
+    "oeGrpBasInfoSrNo": "1047",
+    "windowStartDate_gmc": "06-Dec-2023",
+    "windowStartDate_gpa": "06-Dec-2023",
+    "windowStartDate_gtl": "06-Dec-2023",
+    "windowEndDate_gmc": "31-Dec-2023",
+    "windowEndDate_gpa": "02-Dec-2023",
+    "windowEndDate_gtl": "25-Dec-2023"
+  },
+  "message": {
+    "message": "DATA FOUND SUCCESSFULLY",
+    "status": true
+  }
+}

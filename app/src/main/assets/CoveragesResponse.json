@@ -1,0 +1,50 @@
+{
+  "coverages": [
+    {
+      "policy_type": "1",
+      "type_of_policy": "1",
+      "sum_insured": "1,00,000",
+      "sum_insure_type": "Fixed",
+      "premium": "5,000",
+      "premium_type": "Individual",
+      "to_show_premium": "1",
+      "how_to_show_sum_insured": "1",
+      "employer_contribution": "2,500",
+      "employee_contribution": "2,500",
+      "to_show_employee_contribution": "1",
+      "to_show_employer_contribution": "0",
+      "instruction": "We would like to inform you that we would require the following documents in order to settle your claim at the earliest. Request you to go through the documents mentioned below carefully, along with the specific instructions mentioned, which will help you in submission of these at the earliest."
+    },
+    {
+      "policy_type": "2",
+      "type_of_policy": "1",
+      "sum_insured": "75,00,000",
+      "sum_insure_type": "",
+      "premium": "50,000",
+      "premium_type": "",
+      "to_show_premium": "1",
+      "how_to_show_sum_insured": "1",
+      "employer_contribution": "25,000",
+      "employee_contribution": "25,000",
+      "to_show_employee_contribution": "0",
+      "to_show_employer_contribution": "1",
+      "instruction": "We would like to inform you that we would require the following documents in order to settle your claim at the earliest. Request you to go through the documents mentioned below carefully, along with the specific instructions mentioned, which will help you in submission of these at the earliest."
+    },
+    {
+      "policy_type": "3",
+      "type_of_policy": "1",
+      "sum_insured": "5 times of CTC",
+      "sum_insure_type": "",
+      "premium": "10,000",
+      "premium_type": "",
+      "to_show_premium": "1",
+      "how_to_show_sum_insured": "0",
+      "employer_contribution": "2,000",
+      "employee_contribution": "8,000",
+      "to_show_employee_contribution": "1",
+      "to_show_employer_contribution": "1",
+      "instruction": "We would like to inform you that we would require the following documents in order to settle your claim at the earliest. Request you to go through the documents mentioned below carefully, along with the specific instructions mentioned, which will help you in submission of these at the earliest."
+    }
+
+  ]
+}

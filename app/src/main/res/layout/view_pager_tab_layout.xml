@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/cardLeftMargin"
+    android:background="@drawable/top_grad"
+    android:layout_marginTop="@dimen/cardTopMargin"
+    android:layout_marginEnd="@dimen/cardLeftMargin"
+    android:focusableInTouchMode="true"
+    android:padding="8dp"
+    app:layout_collapseMode="pin">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewPagerTabs"
+        android:background="@drawable/no_border_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tabselector"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0sp"
+        app:tabRippleColor="@color/white"
+        app:tabMode="fixed"
+        app:tabUnboundedRipple="false"
+        app:tabSelectedTextColor="@color/cpb_white"
+        app:tabTextAppearance="@style/tabTextAppearance"
+        app:tabTextColor="@color/dark_grey">
+
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>

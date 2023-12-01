@@ -1,0 +1,76 @@
+{
+  "relations": [
+    {
+      "Relation": "SPOUSE",
+      "max_count": 1,
+      "RelationID": "11",
+      "group": "1",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "PARTNER",
+      "max_count": 1,
+      "RelationID": "21",
+      "group": "1",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "SON",
+      "max_count": 2,
+      "RelationID": "3",
+      "group": "1",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "DAUGHTER",
+      "max_count": 2,
+      "RelationID": "4",
+      "group": "1",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "TWINS",
+      "max_count": 1,
+      "RelationID": "13",
+      "group": "2",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "FATHER",
+      "max_count": 1,
+      "RelationID": "1",
+      "group": "2",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "MOTHER",
+      "max_count": 1,
+      "RelationID": "2",
+      "group": "2",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "FATHER-IN-LAW",
+      "max_count": 1,
+      "RelationID": "5",
+      "group": "2",
+      "max_age": 20,
+      "min_age": 18
+    },
+    {
+      "Relation": "MOTHER-IN-LAW",
+      "max_count": 1,
+      "RelationID": "6",
+      "group": "2",
+      "max_age": 20,
+      "min_age": 18
+    }
+  ]
+}

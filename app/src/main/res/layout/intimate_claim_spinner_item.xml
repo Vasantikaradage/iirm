@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/cardTopMargin"
+    android:paddingEnd="@dimen/cardTopMargin">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/claims_beneficiary_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/setpoppins"
+        android:gravity="center"
+        android:padding="@dimen/cardMargin"
+        android:text="--Select--"
+        android:textColor="@color/dark_black"
+        android:textSize="@dimen/mediumTextSize" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dropdown_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/arrow"
+        android:visibility="gone" />
+</RelativeLayout>

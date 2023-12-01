@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nhborder"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/layoutPadding">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/cardMargin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layoutPadding"
+            android:textSize="@dimen/contactIconSize"
+            app:srcCompat="@drawable/ic_smsaddressblack_01" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/setpoppins"
+            android:padding="@dimen/layoutPadding"
+            android:text="SMS address"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/mediumTextSize" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblSMSHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cardMargin"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:layout_marginEnd="@dimen/cardMargin"
+        android:fontFamily="@font/setpoppins"
+        android:gravity="center"
+        android:padding="@dimen/layoutPadding"
+        android:paddingStart="@dimen/largeTextSize"
+        android:paddingEnd="@dimen/largeTextSize"
+        android:text="@string/smsDialog"
+        android:textColor="@color/dark_black"
+        android:textSize="@dimen/mediumTextSize"
+        app:layout_constraintTop_toBottomOf="@id/llTitle" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/smsContact"
+        android:layout_width="0sp"
+        android:layout_height="50sp"
+        android:layout_margin="@dimen/cardMargin"
+        android:background="@drawable/nhborder"
+        android:fontFamily="@font/setpoppins"
+        android:hint="@string/entermob"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingStart="@dimen/largeTextSize"
+        android:paddingEnd="@dimen/largeTextSize"
+        app:hintTextAppearance="@style/tabTextAppearance"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblSMSHeader" />
+
+    <LinearLayout
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardMargin"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smsContact">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cpb_white"
+            android:fontFamily="@font/setpoppins"
+            android:text="Cancel"
+            android:textColor="@color/cpb_black"
+            app:layout_constraintLeft_toRightOf="@id/btnSubmit"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_back"
+            android:fontFamily="@font/setpoppins"
+            android:text="@string/btnSubmit"
+            android:textColor="@color/cpb_white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

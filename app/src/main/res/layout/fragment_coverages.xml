@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        tools:context=".insurance.coverages.CoveragesFragment">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/tabs"
+                layout="@layout/view_pager_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/cardLeftMargin"
+                android:layout_marginTop="@dimen/cardTopMargin"
+                android:layout_marginEnd="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardBottomMargin"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/tabs_blocker"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tabs"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/material_size_12"
+                android:background="@drawable/spinnerbackground"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/policy_selection_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/material_size_6"
+                    android:layout_toStartOf="@id/change_image_policy"
+                    android:fontFamily="@font/setpoppinssemibold"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/change_image_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/material_size_8"
+                    android:src="@drawable/ic_drop_down"
+                    app:tint="@color/grey1" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/policy_selection_layout_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <!--  <include
+                      android:id="@+id/tabs"
+                      layout="@layout/view_pager_tab_layout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="@dimen/material_size_12" />
+                  <RelativeLayout
+                      android:id="@+id/spinner_holder"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/cardLeftMargin"
+                      android:layout_marginRight="@dimen/cardLeftMargin"
+                      android:layout_marginBottom="@dimen/material_size_12"
+                      android:background="@drawable/spinnerbackground">
+
+                      <TextView
+                          android:id="@+id/policy_selection_text"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/material_size_6"
+                          android:layout_marginTop="@dimen/material_size_6"
+                          android:layout_marginEnd="@dimen/material_size_6"
+                          android:layout_marginBottom="@dimen/material_size_6"
+                          android:layout_toStartOf="@id/change_image_policy"
+                          android:fontFamily="@font/setpoppinssemibold"
+                          android:textColor="@color/grey1"
+                          android:textSize="15sp" />
+
+                      <ImageView
+                          android:id="@+id/change_image_policy"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:layout_centerVertical="true"
+                          android:layout_marginEnd="@dimen/material_size_8"
+                          android:src="@drawable/ic_drop_down"
+                          app:tint="@color/grey1" />
+
+                  </RelativeLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/policy_selection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_menu"
+                    android:layout_marginHorizontal="@dimen/cardLeftMargin"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/material_size_6"
+                    android:weightSum="6">
+
+                    <!-- CHIP POLICY -->
+                    <RelativeLayout
+                        android:id="@+id/select_policy_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="3"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_4">
+
+                        <TextView
+                            android:id="@+id/selected_policy_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="@dimen/material_size_2"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/setpoppins"
+                            android:maxLines="1"
+                            android:textColor="@color/label_color"
+                            app:drawableStartCompat="@drawable/ic_sort"
+                            tools:text="POLICY NUMBER" />
+
+                    </RelativeLayout>
+
+                    <!-- CHIP GHI -->
+                    <RelativeLayout
+                        android:id="@+id/ghi_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background_selected"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/ghi_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GHI" />
+
+                    </RelativeLayout>
+                    <!-- CHIP GPA -->
+                    <RelativeLayout
+                        android:id="@+id/gpa_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/gpa_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GPA" />
+
+                    </RelativeLayout>
+                    <!-- CHIP GTL -->
+                    <RelativeLayout
+                        android:id="@+id/gtl_chip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/material_size_2"
+                        android:layout_marginVertical="@dimen/material_size_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/chips_background"
+                        android:padding="@dimen/material_size_6">
+
+                        <TextView
+                            android:id="@+id/gtl_chip_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/setpoppins"
+                            android:text="GTL" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/policy_holder_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/policy_selection_layout_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/cardLeftMargin"
+                android:layout_marginEnd="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardBottomMargin"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:id="@+id/My_Coverages_Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/title_bg"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:padding="@dimen/cardMargin"
+                        android:text="@string/my_policy_details"
+                        android:textColor="@color/label_color"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/policy_number_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingTop="8sp"
+                        android:text="Policy"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/textSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/policy_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:includeFontPadding="false"
+                        android:inputType="textCapCharacters|textMultiLine"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingEnd="8sp"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        tools:text="@tools:sample/full_names" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/policy_date_valid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:includeFontPadding="false"
+                        android:inputType="textCapCharacters|textMultiLine"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingEnd="8sp"
+                        android:paddingBottom="8sp"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        tools:text="@tools:sample/full_names" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/broker_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingTop="8sp"
+                        android:text="Broker"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/textSize"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/broker_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:inputType="textCapCharacters|textMultiLine"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingEnd="8sp"
+                        android:paddingBottom="8sp"
+                        android:text="-"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurer_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:paddingStart="8sp"
+                        android:paddingTop="8sp"
+                        android:text="Insurer"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/textSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/insurer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:inputType="textCapCharacters|textMultiLine"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Life and General Insurance and Reinsurance Brokers PVT LTD"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tpa_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingTop="8dp"
+                        android:text="TPA"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/textSize"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tpa_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters|textMultiLine"
+                        android:paddingStart="8sp"
+                        android:paddingEnd="8sp"
+                        android:paddingBottom="@dimen/cardMargin"
+                        android:text="Future General India"
+                        android:textColor="@color/cpb_black"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sum_insured_card_hold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/policy_holder_card"
+                android:layout_marginLeft="@dimen/cardLeftMargin"
+                android:layout_marginRight="@dimen/cardLeftMargin"
+                android:layout_marginBottom="@dimen/cardBottomMargin"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/title_back"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:padding="@dimen/cardMargin"
+                        android:text="Sum Insured"
+                        android:textColor="@color/title_back"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lblhospCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppinssemibold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Sum Insured"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/titleBack"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/RupeeContext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/cardMargin"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="(₹)"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        app:layout_constraintBottom_toBottomOf="@id/titleBack"
+                        app:layout_constraintLeft_toRightOf="@id/lblhospCount"
+                        app:layout_constraintTop_toTopOf="@id/titleBack" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/hospCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="400"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/lblhospCount"
+                        app:layout_constraintRight_toRightOf="@id/lblhospCount"
+                        app:layout_constraintTop_toTopOf="@id/lblhospCount" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/base_sum_insured"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardLeftMargin"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="@dimen/cardMargin"
+                        android:text="-"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+                        app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/top_up_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="-"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        app:layout_constraintLeft_toLeftOf="@id/guideline4"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/setpoppins_medium"
+                        android:text="Rs. 10,00,000"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/top_up_amount"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layoutPadding"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Base"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/mediumTextSize"
+                        app:layout_constraintEnd_toEndOf="@+id/base_sum_insured"
+                        app:layout_constraintStart_toStartOf="@+id/base_sum_insured"
+                        app:layout_constraintTop_toBottomOf="@id/titleBack" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="@string/top_up"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/mediumTextSize"
+                        app:layout_constraintEnd_toEndOf="@+id/top_up_amount"
+                        app:layout_constraintStart_toStartOf="@+id/top_up_amount"
+                        app:layout_constraintTop_toBottomOf="@id/titleBack" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTertiary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layoutPadding"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="Total"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/mediumTextSize"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/txtSecondary"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lblhospCount" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/coverages_details_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sum_insured_card_hold"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/cardMargin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/coverage_dependants_item" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/primary_variant" />
+
+    <RelativeLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_error"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_api_error_state"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/background" />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_error"
+            android:layout_marginVertical="6dp"
+            android:fontFamily="@font/setpoppins_medium"
+            android:gravity="center"
+            android:text="@string/something_went_wrong"
+            android:textColor="@color/background"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/error_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_error_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nodocument"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/messageTextView_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_error_2"
+            android:layout_marginVertical="6dp"
+            android:fontFamily="@font/setpoppins_medium"
+            android:gravity="center"
+            android:text="@string/nothing_to_show"
+            android:textColor="@color/background"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

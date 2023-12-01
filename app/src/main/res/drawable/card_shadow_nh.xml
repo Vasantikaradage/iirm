@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.4dp"
+                android:left="@dimen/twodp"
+                android:right="@dimen/twodp"
+                android:top="@dimen/twodp" />
+
+            <solid android:color="#00cccccc" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="@dimen/twodp"
+                android:right="@dimen/twodp"
+                android:top="@dimen/twodp" />
+
+            <solid android:color="#10cccccc" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1.2dp"
+                android:left="@dimen/twodp"
+                android:right="@dimen/twodp"
+                android:top="@dimen/twodp" />
+
+            <solid android:color="#20cccccc" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1.6dp"
+                android:left="@dimen/twodp"
+                android:right="@dimen/twodp"
+                android:top="@dimen/twodp" />
+
+            <solid android:color="#30cccccc" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="2dp"
+                android:left="@dimen/twodp"
+                android:right="@dimen/twodp"
+                android:top="@dimen/twodp" />
+
+            <solid android:color="#50cccccc" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+
+            <corners android:radius="@dimen/titleCardCornerRadius" />
+        </shape>
+    </item>
+
+</layer-list>

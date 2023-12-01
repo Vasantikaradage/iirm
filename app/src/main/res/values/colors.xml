@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#F8873C</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background3">#545454</color>
+    <color name="label_v2">#565966</color>
+
+
+    <!-->Colors from old version (need rework in names) <-->
+    <color name="cpb_grey">#909090</color>
+    <color name="div_grey">#cccccc</color>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_white">@android:color/white</color>
+    <color name="cpb_black">#000000</color>
+    <color name="transparent">#0000</color>
+
+    <color name="btnColor">#4b66ea</color>
+    <color name="lng">#ff1000</color>
+    <color name="hr">#e7be2a</color>
+    <color name="sc">#F1C40F</color>
+    <color name="pc">#4B66EA</color>
+    <color name="tc">#ed6b75</color>
+    <color name="textcolorgreen">#16381F</color>
+    <color name="new_query">#a116ae</color>
+
+    <!--===============New Design=========================-->
+
+    <color name="light_grey">#e5e5e5</color>
+    <color name="dark_grey">#969696</color>
+
+
+    <color name="dark_black">#000000</color>
+    <color name="light_black">#545454</color>
+    <color name="gradient">#238cec</color>
+    <!--    <color name="gradient_start">#238cec</coloradn>
+        <color name="gradient_center">#6784EF</color>-->
+    <color name="icon_color">#00324E</color>
+    <color name="icon_color_primary">#2a95be</color>
+    <color name="gradient_start">#F8873C</color>
+    <color name="broker_color">#327fef</color>
+    <color name="primary_variant">#F4642B</color>
+    <color name="gradient_end">#F8873C</color>
+    <color name="title_back">#1A00324E</color>
+    <color name="label_color">#00324E</color>
+
+    <color name="steps_error">#e7505a</color>
+    <color name="steps_error_bg">#fef7f8</color>
+
+    <color name="claimsSuccess">#26c281</color>
+    <color name="title_back_2">#F8F9FA</color>
+    <!--walkthrough-->
+
+    <!-- Screens background color-->
+
+    <!-- dots inactive colors -->
+    <color name="color_grey">#c4c3c3</color>
+
+    <!-- dots active colors -->
+    <!--       Wellness    -->
+
+    <!-- Status Color -->
+    <color name="grey1">#828282</color>
+    <color name="grey2">#a9a9a9</color>
+
+    <color name="red">#ff0000</color>
+
+    <color name="background">#C2C2C2</color>
+    <color name="background1">#EDEDED</color>
+
+    <color name="dark_grey_text">#252525</color>
+    <color name="hr_back">#f5f5f5</color>
+
+
+    <color name="bluedarkbg">#0171d5</color>
+    <color name="yellowdarkbg">#ff8f26</color>
+    <color name="yellowlightbg">#ffbb3d</color>
+    <color name="greenlightbg2">#3ed9b1</color>
+    <color name="greendarkbg1">#40e0d0</color>
+
+    <color name="reset_btn">#ced1d4</color>
+
+
+    <!-- Status Color -->
+    <color name="text_color">#484646</color>
+
+    <color name="reimbColor">#4B77BE</color>
+
+    <color name="grey_back_color">#f1efef</color>
+
+
+    <color name="color_line_stoke">#45AED6</color>
+    <color name="dark_gray_claims">#555555</color>
+    <color name="light_gray_claims">#7C7C7C</color>
+    <color name="error_text_snack_bar">#BA1A1A</color>
+    <color name="error_container">#FFDAD6</color>
+
+    <!--=============EnrollmentColors===========================-->
+
+    <color name="overlay_progress">#804D4D4D</color>
+
+
+    <!--=============IIRM COLOR FIGMA===========================-->
+
+    <color name="stroke_color">#565966</color>
+    <color name="light_hint_grey">#CDD3DD</color>
+    <color name="second_variant_blue">#2A95BE</color>
+    <color name="light_label_grey">#969696</color>
+    <color name="dark_label_grey">#565966</color>
+    <color name="light_grey_separator">#6F7380</color>
+
+</resources>

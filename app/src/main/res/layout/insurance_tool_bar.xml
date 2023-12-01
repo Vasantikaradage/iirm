@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/insurance_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/insurance_toolbar_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/insurance_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/App_font_toolBar"
+            app:titleTextColor="@color/white" />
+
+     <!--   <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_iirm"
+            android:visibility="visible" />-->
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/setpoppins_medium"
+            android:src="@drawable/iirm_white"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout>

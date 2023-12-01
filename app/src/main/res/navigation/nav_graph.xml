@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.indiainsure.android.MB360.insurance.escalations.SupportFragment"
+        android:label="Contact Details"
+        tools:layout="@layout/fragment_support" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.indiainsure.android.MB360.insurance.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_coverages"
+            app:destination="@id/coverages"
+
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_policyFeaturesFragment"
+            app:destination="@id/policyFeaturesFragment"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_claimsFragment"
+            app:destination="@id/claimsFragment"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_claimsProcedureFragment"
+            app:destination="@id/claimsProcedureFragment"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_faqFragment"
+            app:destination="@id/faqFragment"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_providerNetwork"
+            app:destination="@id/providerNetwork"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_myClaimsFragment"
+            app:destination="@id/myClaimsFragment"
+            app:enterAnim="@anim/slide_from_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_myQueriesFragment"
+            app:destination="@id/myQueriesFragment"
+            app:enterAnim="@anim/slide_from_left" />
+       <!-- <action
+            android:id="@+id/action_homeFragment_to_enrollmentHomeFragment"
+            app:destination="@id/enrollmentHomeFragment" />-->
+        <action
+            android:id="@+id/action_homeFragment_to_enrollmentWebView"
+            app:destination="@id/enrollmentWebView" />
+    </fragment>
+    <fragment
+        android:id="@+id/ecardFragment"
+        android:name="com.indiainsure.android.MB360.insurance.ecards.ui.EcardFragment"
+        android:label="E-Card"
+        tools:layout="@layout/fragment_ecard" />
+    <fragment
+        android:id="@+id/utilitiesFragment"
+        android:name="com.indiainsure.android.MB360.insurance.utilities.UtilitiesFragment"
+        android:label="Utilities"
+        tools:layout="@layout/fragment_utilities" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.indiainsure.android.MB360.insurance.profile.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/coverages"
+        android:name="com.indiainsure.android.MB360.insurance.coverages.CoveragesFragment"
+        android:label="@string/my_coverages"
+        tools:layout="@layout/fragment_coverages" />
+    <fragment
+        android:id="@+id/policyFeaturesFragment"
+        android:name="com.indiainsure.android.MB360.insurance.policyfeatures.PolicyFeaturesFragment"
+        android:label="Policy Features"
+        tools:layout="@layout/fragment_policy_features" />
+    <fragment
+        android:id="@+id/claimsFragment"
+        android:name="com.indiainsure.android.MB360.insurance.claims.repository.ClaimsFragment"
+        android:label="@string/intimate_claims"
+        tools:layout="@layout/fragment_claims" />
+    <fragment
+        android:id="@+id/claimsProcedureFragment"
+        android:name="com.indiainsure.android.MB360.insurance.claimsprocedure.ClaimsProcedureFragment"
+        android:label="Claim Procedure"
+        tools:layout="@layout/fragment_claims_procedure">
+        <action
+            android:id="@+id/action_claimsProcedureFragment_to_providerNetwork"
+            app:destination="@id/providerNetwork" />
+        <action
+            android:id="@+id/action_claimsProcedureFragment_to_utilitiesFragment"
+            app:destination="@id/utilitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.indiainsure.android.MB360.insurance.FAQ.FaqFragment"
+        android:label="FAQs"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/providerNetwork"
+        android:name="com.indiainsure.android.MB360.insurance.hospitalnetwork.ProviderNetworkFragment"
+        android:label="@string/provider_network"
+        tools:layout="@layout/fragment_provider_network">
+        <action
+            android:id="@+id/action_providerNetwork_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myClaimsFragment"
+        android:name="com.indiainsure.android.MB360.insurance.myclaims.ui.MyClaimsFragment"
+        android:label="My Claims"
+        tools:layout="@layout/fragment_my_claims">
+        <action
+            android:id="@+id/action_myClaimsFragment_to_myClaimsdetails"
+            app:destination="@id/myClaimsdetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/myClaimsdetails"
+        android:name="com.indiainsure.android.MB360.insurance.myclaims.ui.MyClaimsdetails"
+        android:label="Claim Status"
+        tools:layout="@layout/fragment_my_claimsdetails" >
+        <argument
+            android:name="claimSrNo"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/queryFragment"
+        android:name="com.indiainsure.android.MB360.insurance.queries.ui.QueryFragment"
+        android:label="@string/my_queries"
+        tools:layout="@layout/fragment_query">
+        <action
+            android:id="@+id/action_queryFragment_to_queryDetailsFragment"
+            app:destination="@id/queryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queryDetailsFragment"
+        android:name="com.indiainsure.android.MB360.insurance.queries.ui.QueryDetailsFragment"
+        android:label="@string/view_query"
+        tools:layout="@layout/fragment_query_details">
+        <argument
+            android:name="getQueryInfo"
+            app:argType="com.indiainsure.android.MB360.insurance.queries.responseclass.AllQuery" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.indiainsure.android.MB360.insurance.hospitalnetwork.ui.MapsFragment"
+        android:label="@string/provider_network"
+        tools:layout="@layout/fragment_maps">
+
+        <argument
+            android:name="getHospitalName"
+            app:argType="string" />
+        <argument
+            android:name="getHospitalAddress"
+            app:argType="string" />
+
+        <argument
+            android:name="getLongitude"
+            app:argType="string" />
+        <argument
+            android:name="getLatitude"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myQueriesFragment"
+        android:name="com.indiainsure.android.MB360.insurance.queries.ui.MyQueriesFragment"
+        android:label="@string/my_queries"
+        tools:layout="@layout/fragment_my_queries">
+        <action
+            android:id="@+id/action_myQueriesFragment_to_queryDetailsFragment"
+            app:destination="@id/queryDetailsFragment" />
+        <action
+            android:id="@+id/action_myQueriesFragment_to_newQueryFragment"
+            app:destination="@id/newQueryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newQueryFragment"
+        android:name="com.indiainsure.android.MB360.insurance.queries.ui.NewQueryFileUploadFragment"
+        android:label="New Query"
+        tools:layout="@layout/fragment_new_query">
+        <argument
+            android:name="spinnerItemIndex"
+            android:defaultValue="100"
+            app:argType="integer" />
+
+    </fragment>
+   <!-- <fragment
+        android:id="@+id/enrollmentHomeFragment"
+        android:name="com.indiainsure.android.MB360.insurance.enrollment.EnrollmentHomeFragment"
+        android:label="Enrollment"
+        tools:layout="@layout/fragment_enrollment_home">
+        <action
+            android:id="@+id/action_enrollmentHomeFragment_to_enrollmentSummaryFragment"
+            app:destination="@id/enrollmentSummaryFragment" />
+    </fragment>-->
+   <!-- <fragment
+        android:id="@+id/enrollmentSummaryFragment"
+        android:name="com.indiainsure.android.MB360.insurance.enrollment.ui.EnrollmentSummaryFragment"
+        android:label="fragment_enrollment_summary"
+        tools:layout="@layout/fragment_enrollment_summary">
+        <action
+            android:id="@+id/action_enrollmentSummaryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/profileFragmentListService"
+        android:name="com.indiainsure.android.MB360.insurance.profile.ui.ProfileFragmentListService"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_list_service">
+        <action
+            android:id="@+id/action_profileFragmentListService_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_myQueriesFragment"
+            app:destination="@id/myQueriesFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_claimsFragment"
+            app:destination="@id/claimsFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_queryFragment"
+            app:destination="@id/queryFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_claimsProcedureFragment"
+            app:destination="@id/claimsProcedureFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_myClaimsFragment"
+            app:destination="@id/myClaimsFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_policyFeaturesFragment"
+            app:destination="@id/policyFeaturesFragment" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_providerNetwork"
+            app:destination="@id/providerNetwork" />
+        <action
+            android:id="@+id/action_profileFragmentListService_to_coverages"
+            app:destination="@id/coverages" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enrollmentWebView"
+        android:name="com.indiainsure.android.MB360.insurance.EnrollmentWebView"
+        android:label="Enrollment"
+        tools:layout="@layout/fragment_enrollment_web_view">
+        <argument
+            android:name="getEnrollmentUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,68 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginHorizontal="17dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <RelativeLayout
+        android:id="@+id/item_utilities_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/item_utilities_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/cardLeftMargin"
+            android:contentDescription="@string/utilities_icon"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_file"
+            app:tint="@color/icon_color" />
+
+
+        <TextView
+            android:id="@+id/item_utilities_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/cardMargin"
+            android:layout_toEndOf="@id/item_utilities_icon"
+            android:fontFamily="@font/setpoppins"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/mediumTextSize"
+            tools:text="ANNEXURE_A" />
+
+        <ImageView
+            android:id="@+id/item_utilities_download"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:contentDescription="@string/utilities_icon"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_by_download"
+            app:tint="@color/icon_color" />
+
+        <ProgressBar
+            android:id="@+id/item_download_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/cardLeftMargin"
+            android:indeterminateTint="@color/icon_color"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insurance.myclaims.ui.MyClaimsdetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_size_12">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/claimLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/cardMargin">
+
+                <View
+                    android:id="@+id/progress_bar"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@color/color_line_stoke"
+                    app:layout_constraintBottom_toBottomOf="@+id/rv2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/progress_bar2"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@color/color_line_stoke"
+                    app:layout_constraintBottom_toBottomOf="@+id/rv3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/rv2" />
+
+                <RelativeLayout
+                    android:id="@+id/rv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@drawable/claim_end"
+                    android:padding="@dimen/cardMargin"
+                    app:layout_constraintLeft_toLeftOf="@id/progress_bar"
+                    app:layout_constraintRight_toRightOf="@id/progress_bar"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img1"
+                        android:layout_width="@dimen/material_size_24"
+                        android:layout_height="@dimen/material_size_24"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/active_white" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:padding="@dimen/layoutPadding"
+                    android:textColor="@color/dark_gray_claims"
+                    android:text="Member Information"
+                    android:textSize="@dimen/mediumTextSize"
+                    app:layout_constraintBottom_toBottomOf="@id/rv1"
+                    app:layout_constraintLeft_toRightOf="@id/rv1"
+                    app:layout_constraintTop_toTopOf="@id/rv1" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/My_Coverages_Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginEnd="@dimen/cardMargin"
+                    android:background="@drawable/card_shadow"
+                    android:orientation="vertical"
+                    android:padding="@dimen/material_size_16"
+                    app:layout_constraintLeft_toRightOf="@id/rv1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleTxt">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/material_size_16">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBeneficiary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="right"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Beneficiary Name"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBeneficiaryValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRelation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Relation"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRelationValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvKey"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="@string/lblGender"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Date of Birth"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOBValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="@string/lblAge"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAgeValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTPA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="right"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="TPA ID"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTPAValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@drawable/claim_end"
+                    android:padding="@dimen/cardMargin"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="@id/progress_bar"
+                    app:layout_constraintRight_toRightOf="@id/progress_bar"
+                    app:layout_constraintTop_toBottomOf="@id/My_Coverages_Card">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/claimreport" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/rv2"
+                    app:layout_constraintLeft_toRightOf="@id/rv2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/rv2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleTxt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardMargin"
+                        android:animateLayoutChanges="true"
+                        android:textColor="@color/dark_gray_claims"
+                        android:text="Claim Reported on"
+                        android:textSize="@dimen/mediumTextSize" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/calendarimg"
+                        android:layout_width="@dimen/toolbarIconSize"
+                        android:layout_height="@dimen/toolbarIconSize"
+                        android:layout_marginStart="@dimen/layoutPadding"
+                        android:animateLayoutChanges="true"
+                        android:padding="@dimen/layoutPadding"
+                        android:src="@drawable/dateblue"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleTxt2Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/layoutPadding"
+                        android:animateLayoutChanges="true"
+                        android:autoSizeMaxTextSize="@dimen/mediumTextSize"
+                        android:autoSizeMinTextSize="12sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#00324E"
+
+                        tools:text="@tools:sample/date/ddmmyy" />
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Network_Hospital_Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginEnd="@dimen/cardMargin"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toRightOf="@id/rv1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll1">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/material_size_16"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Claim Number"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimNumberValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimExtension"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Claim Extension"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimExtensionValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:text="Estimated Amount"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/layoutPadding">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/layoutPadding"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:text="@string/rs"
+                                    android:textColor="@color/cpb_black" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAmountValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKey1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Hospital Name"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cashless_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOA1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Cashless Denial on"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOAValue1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:text="-"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOD1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="start"
+                                    android:text="Cashless Amount"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDODValue1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:text="-"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Admitted on"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOAValue2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDOD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="right"
+                                    android:text="Discharged on"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDODValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/layoutPadding"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAilment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="end"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Ailment"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAilmentValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:background="@drawable/claim_end"
+                    android:padding="@dimen/cardMargin"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="@id/progress_bar"
+                    app:layout_constraintRight_toRightOf="@id/progress_bar"
+                    app:layout_constraintTop_toBottomOf="@id/Network_Hospital_Card">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_correct_01" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleTxt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:animateLayoutChanges="true"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:text="Cashless Information"
+                    android:textColor="@color/dark_gray_claims"
+                    android:textSize="@dimen/mediumTextSize"
+                    app:layout_constraintBottom_toBottomOf="@id/rv3"
+                    app:layout_constraintLeft_toRightOf="@id/rv3"
+                    app:layout_constraintTop_toTopOf="@+id/rv3" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/My_Claim_Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginEnd="@dimen/cardMargin"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:layout_constraintLeft_toRightOf="@id/rv3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/material_size_16"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/lvStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Status"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStatusValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="bottom"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llLastCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/lv11"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimNumber11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Bill Amount"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/layoutPadding">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvClaimRs1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/setpoppins"
+                                        android:text="@string/rs"
+                                        android:textColor="@color/cpb_black" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvClaimNumberValue11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/setpoppins"
+                                        android:paddingStart="@dimen/layoutPadding"
+                                        android:textColor="@color/dark_black"
+                                        android:textSize="@dimen/mediumTextSize" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+
+                            <LinearLayout
+                                android:id="@+id/lv21"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAmount111"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Bill Date"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAmountValue11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llLastCard11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/lv1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClaimNumber1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="@string/cashless_auth"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/layoutPadding">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvClaimRs"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/setpoppins"
+                                        android:text="@string/rs"
+                                        android:textColor="@color/cpb_black"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvClaimNumberValue1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/setpoppins"
+                                        android:paddingStart="@dimen/layoutPadding"
+                                        android:textColor="@color/dark_black"
+                                        android:textSize="@dimen/mediumTextSize" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/div_grey" />
+
+                            <LinearLayout
+                                android:id="@+id/lv2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAmount1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="@string/cashless_date"
+                                    android:textColor="@color/light_gray_claims"
+                                    android:textSize="@dimen/textSize" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAmountValue1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/def_layout"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/deflvl1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:textSize="@dimen/textSize"
+                                    android:text="First Deficiency Letter Date"
+                                    android:textColor="@color/light_gray_claims" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_1_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textSize="@dimen/mediumTextSize"
+                                    android:textColor="@color/dark_black" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/deflvl2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:textSize="@dimen/textSize"
+                                    android:text="Second Deficiency Letter Date"
+                                    android:textColor="@color/light_gray_claims" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_2_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:textSize="@dimen/mediumTextSize"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textColor="@color/dark_black" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/deflvl3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/cardMargin"
+                                android:paddingEnd="@dimen/cardMargin">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:gravity="left"
+                                    android:textSize="@dimen/textSize"
+                                    android:paddingEnd="@dimen/layoutPadding"
+                                    android:text="Deficiency Retrieval Date"
+                                    android:textColor="@color/light_gray_claims" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/def_3_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:textSize="@dimen/mediumTextSize"
+                                    android:textColor="@color/dark_black" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKey2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:text="Status"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="bottom"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lv4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKey3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="right"
+                                android:paddingLeft="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Amount paid to provider"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/layoutPadding">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/rsAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:text="@string/rs"
+                                    android:textColor="@color/cpb_black" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvValue3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lvCopayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCoPayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="right"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="@string/cashless_amt"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/layoutPadding">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/coPayRs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:text="@string/rs"
+                                    android:textColor="@color/cpb_black"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCoPaymentValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/setpoppins"
+                                    android:paddingStart="@dimen/layoutPadding"
+                                    android:text="-"
+                                    android:textColor="@color/dark_black"
+                                    android:textSize="@dimen/mediumTextSize" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lv8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKey66"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:paddingEnd="@dimen/layoutPadding"
+                                android:text="Deduction Reasons :"
+                                android:textColor="@color/light_gray_claims" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvValue66"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/setpoppins"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lv5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/cardMargin"
+                            android:paddingEnd="@dimen/cardMargin"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvKey4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="left"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:text="@string/deduct_reasons"
+                                android:textColor="@color/light_gray_claims"
+                                android:textSize="@dimen/textSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvValue4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/setpoppins"
+                                android:maxLines="3"
+                                android:paddingStart="@dimen/layoutPadding"
+                                android:textColor="@color/dark_black"
+                                android:textSize="@dimen/mediumTextSize" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/btnShowMore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:fontFamily="@font/setpoppins"
+                                android:gravity="right"
+                                android:text="...Read More"
+                                android:textColor="@color/reimbColor" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:animateLayoutChanges="true"
+                    android:fontFamily="@font/setpoppins"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mediumTextSize"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toRightOf="@id/rv3"
+                    app:layout_constraintTop_toBottomOf="@id/My_Claim_Card"
+                    tools:text="Cashless Information" />
+
+                <LinearLayout
+                    android:id="@+id/card4"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginEnd="@dimen/cardMargin"
+                    android:background="@drawable/card_shadow"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/cardMargin"
+                    android:paddingBottom="@dimen/cardMargin"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/rv3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleText4">
+
+                    <LinearLayout
+                        android:id="@+id/lv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingEnd="@dimen/cardMargin"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvkey5"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/setpoppins"
+                            android:gravity="right"
+                            android:paddingEnd="@dimen/layoutPadding"
+                            android:text="@string/cashless_amt"
+                            android:textColor="@color/light_gray_claims" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvValue5"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/setpoppins"
+                            android:paddingStart="@dimen/layoutPadding"
+                            android:textColor="@color/dark_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/cardMargin"
+                        android:paddingEnd="@dimen/cardMargin"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvKey6"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/setpoppins"
+                            android:gravity="right"
+                            android:paddingEnd="@dimen/layoutPadding"
+                            android:text="@string/deduct_reasons"
+                            android:textColor="@color/light_gray_claims" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvValue6"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/setpoppins"
+                            android:maxLines="5"
+                            android:paddingStart="@dimen/layoutPadding"
+                            android:textColor="@color/dark_black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/nhborder"
+        android:elevation="@dimen/cardBottomMargin"
+        android:padding="@dimen/cardMargin"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/primary_variant" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoadingMSg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_bar_load"
+            android:layout_marginTop="@dimen/cardTopMargin"
+            android:fontFamily="@font/setpoppins"
+            android:text="Loading..please wait" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/error_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_error_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nodocument"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/background" />
+
+        <TextView
+            android:id="@+id/messageTextView_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_error_2"
+            android:layout_marginVertical="6dp"
+            android:fontFamily="@font/setpoppins_medium"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/background"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

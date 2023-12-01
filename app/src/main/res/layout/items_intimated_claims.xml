@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/cardLeftMargin"
+    android:layout_marginTop="@dimen/material_size_4"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/material_size_2"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingVertical="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/setpoppinssemibold"
+            android:includeFontPadding="false"
+            android:text="Intimation No."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_size_4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/claim_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="1192"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/openArrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_marginEnd="15dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_minus" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/openDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Claimant"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/claimname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/claim_close_on"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Claim Intimated on"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/claimedon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/claim_close_on"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/closeDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutPadding"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:layout_marginBottom="@dimen/material_size_4"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="Employee"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/cardLeftMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/claim_close_on"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/NOH"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNOH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/cardLeftMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/claim_close_on"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/DOA"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDOA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/claim_close_on"
+
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/estdtime"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/layoutPadding"
+                        android:text="@string/rs"
+                        android:textColor="@color/cpb_black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvestdAMT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/setpoppins"
+                        android:text="@string/claim_close_on"
+                        android:textColor="@color/dark_black"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cardMargin"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:text="@string/DiagnosisAilment"
+                    android:textColor="@color/cpb_grey"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvdiag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/setpoppins"
+                    android:maxLines="3"
+                    android:text="@string/claim_close_on"
+                    android:textColor="@color/dark_black"
+                    android:textSize="@dimen/textSize" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnShowMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/cardLeftMargin"
+                    android:background="@color/white"
+                    android:fontFamily="@font/setpoppins"
+                    android:gravity="right"
+                    android:text="@string/read_more"
+                    android:textColor="@color/reimbColor" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

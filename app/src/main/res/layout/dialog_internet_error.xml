@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/nhborder"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/alertIcon"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/textSize"
+        app:srcCompat="@drawable/ic_by_alert" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAlertMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cardMargin"
+        android:layout_marginTop="@dimen/textSize"
+        android:layout_marginBottom="@dimen/textSize"
+        android:fontFamily="@font/poppinssemibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Entered Otp is incorrect"
+        android:textColor="@color/cpb_black"
+        android:textSize="@dimen/headerTextSize" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cardMargin"
+        android:hint="99999999999"
+        android:maxLength="10"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:fontFamily="@font/setpoppins"
+        android:text="Dismiss"
+        android:textAllCaps="false"
+        android:textColor="@color/cpb_white"
+        android:textSize="@dimen/largeTextSize"
+        android:textStyle="bold" />
+
+</LinearLayout>

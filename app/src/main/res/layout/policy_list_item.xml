@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/policy_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0.5dp"
+    android:background="@color/white">
+
+    <RadioButton
+        android:id="@+id/policy_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:buttonTint="@color/icon_color_primary"
+        android:gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/policy_radio"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/policy_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:textColor="@color/cpb_black"
+            android:textSize="16sp"
+            tools:text="@tools:sample/us_phones" />
+
+        <TextView
+            android:id="@+id/policy_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cpb_black"
+            android:textSize="16sp"
+            tools:text="base policy" />
+
+        <TextView
+            android:id="@+id/policy_valid_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="14sp"
+            tools:text="@tools:sample/date/mmddyy" />
+    </LinearLayout>
+
+</RelativeLayout>

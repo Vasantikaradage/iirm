@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">IIRM IBP</string>
+    <string name="sign_in">Sign in</string>
+    <string name="entermob">Enter your Mobile Number</string>
+    <string name="hint_we_sent_the_otp">We have sent the OTP\nYou should get it soon</string>
+    <string name="btn_resend">resend code</string>
+    <string name="btn_go">go</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_occurred">Error occurred</string>
+    <string name="official_e_mail_id">Official E-Mail ID</string>
+    <string name="lblAge">Age(yrs)</string>
+    <string name="DOB">DOB</string>
+    <string name="all_you_ever_wanted_to_know_about_your_benefits">All you ever wanted to know about your %1$s Benefits</string>
+    <string name="email_label">Email</string>
+    <string name="phone">Phone</string>
+    <string name="utilities_icon">Utilities Icon</string>
+    <string name="login_with">Login with</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="web_credentials">Web Credentials</string>
+    <string name="no_data_found">No data found</string>
+    <string name="rs">₹</string>
+    <string name="base_sum_insured">%1$s</string>
+    <string name="top_up_amount">%1$s</string>
+    <string name="my_insurance">My Insurance</string>
+    <string name="my_wellness">My Wellness</string>
+    <string name="my_fitness">My Fitness</string>
+    <string name="username">username</string>
+    <string name="pers_email">personal email id</string>
+    <string name="cont_details">Emergency Contact Number</string>
+    <string name="emer_relation">Emergency Contact Relation</string>
+    <string name="address">Enter Address</string>
+    <string name="please_select_one">Please select one</string>
+    <string name="loading_please_wait">Loading..Please Wait</string>
+    <string name="reset">Reset</string>
+    <string name="intimate_now">Intimate Now</string>
+
+    <!--=========================Intimate Claims=======================================-->
+    <string name="DiagnosisAilment">Diagnosis/Ailment</string>
+    <string name="estdtime">Estimated/Reported Amount</string>
+    <string name="DOA">DOA/ Likely DOA</string>
+    <string name="NOH">Hospital Name</string>
+    <string name="loc">Hospital Location</string>
+    <string name="enter_diagnosis_ailment">Enter Diagnosis/Ailment</string>
+    <string name="enter_estimated_reported_amount">Enter Estimated/Reported Amount</string>
+    <string name="enter_date_of_admission">Enter Date of Admission</string>
+    <string name="enter_hospital_location">Enter Hospital Location</string>
+    <string name="enter_hospital_name">Enter Hospital Name</string>
+    <string name="not_available">NOT AVAILABLE</string>
+    <string name="policy">Policy</string>
+    <!--============================Network Hospitals=========================================-->
+    <string name="searchHosp">Search by hospital name or city</string>
+    <string name="lblhospCount">Number of Hospitals</string>
+    <string name="lblnearbyhosp">Search nearby hospitals</string>
+    <string name="smsDialog">To get location and contact details of this hospital messaged to your phone,
+        enter your mobile number below. You can add multiple mobile numbers separated by commas.</string>
+    <string name="lblGender">Gender</string>
+
+    <!--===========My Claims===========================-->
+    <string name="cashless_date">Requested on</string>
+    <string name="cashless_auth">Authorised on</string>
+    <string name="cashless_amt">Amount</string>
+
+
+    <string name="paid_amt">Paid Amount</string>
+    <string name="paid_date">Paid on</string>
+    <string name="chq_no">Cheque Number/NEFT Details</string>
+    <string name="deduct_reasons">Deduction Reasons</string>
+
+    <string name="claim_closed">Claim Closure Information</string>
+    <string name="claim_close_on">Closure Reasons</string>
+    <string name="claim_close_reason">Closed On</string>
+
+    <string name="reject_reason">Rejection Reasons</string>
+    <string name="reject_on">Rejected on</string>
+
+    <string name="claim_pay">Claim Payment Information</string>
+    <string name="claim_reject">Claim Rejection Information</string>
+
+    <string name="claim_deficient">Claim Deficiency Details</string>
+    <string name="def_detail">Deficiency Details</string>
+    <string name="def_raised_on">Deficiency Raised On</string>
+
+    <string name="btnSubmit">Submit</string>
+    <string name="top_up">Top-up</string>
+    <string name="my_policy_details">My Policy Details</string>
+    <string name="my_coverages">My Coverages</string>
+    <string name="provider_network">Provider Network</string>
+    <string name="faqs">FAQs</string>
+    <string name="search_hospital_query">Search by hospital name or city</string>
+    <string name="my_queries">My Queries</string>
+    <string name="view_query">View Query</string>
+
+    <!--=========== Wellness ===========================-->
+
+    <string name="new_queries">New Query</string>
+    <string name="empQueryInst">Please ensure that file format is one of the following : xls, xlsx, doc, docx, png, jpeg, jpg, pdf.</string>
+    <string name="file_size">Uploaded files should not be greater than 5 MB</string>
+    <string name="enter_category">Enter Category</string>
+    <string name="enter_query">Enter query</string>
+    <string name="no_intimations_found">No intimations found</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="no_queries_found">No queries found</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="logout_warning">Are you sure you want to logout?</string>
+    <string name="my_benifits">IIRM IBP</string>
+
+    <!---========================Employee/Dependent Details=======================-->
+    <string name="write_your_query_here">Write your query here</string>
+    <!--=======================Top UP===========================================-->
+
+    <string name="no_hospital_found">No hospital found</string>
+    <string name="no_contact_found">No contacts found</string>
+    <string name="enroll">Understand which Insurance and Wellness options to select for your life stage and lifestyle</string>
+    <string name="personalize">Tailor your Benefits plan and Wellness choices to suit your personal needs</string>
+    <string name="manage">Achieve more work-life balance and lead a healthier life</string>
+    <string name="hint_get_you_started">Get Started</string>
+    <string name="my_claims">My Claims</string>
+    <string name="emergency_contact_number">Emergency Contact Number</string>
+    <string name="cashless_procedure_steps">CASHLESS PROCEDURE STEPS</string>
+    <string name="reimbursment_procedure_steps">REIMBURSEMENT PROCEDURE STEPS</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="read_less">…Read Less</string>
+    <string name="read_more">…Read More</string>
+    <string name="view_profile">View Profile</string>
+    <string name="logout">Logout</string>
+    <string name="intimate_claims">Intimate Claim</string>
+    <string name="claim_procedure">Claim Procedures</string>
+    <string name="policyfeatures">Policy Features</string>
+    <string name="gpa_claims_steps">GROUP PERSONAL ACCIDENT CLAIM PROCEDURE STEPS</string>
+    <string name="gtl_claims_steps">GROUP TERM LIFE CLAIM PROCEDURE STEPS</string>
+    <string name="nothing_to_show">Nothing to show.</string>
+    <string name="Resolved_question_mark">solved ?</string>
+    <string name="additional_instructions">Additional Instructions</string>
+    <string name="no_claims_reported">No claims reported</string>
+
+    <!--============================Aktivo ============================-->
+
+    <!--===============================Aktivo Commentary================================================-->
+
+    <string name="dex_crc">4756345784</string>
+    <string name="pass_phrase">c718eb7dad182udxdiu2uw1ui3d</string>
+    <string name="toll_free_number">Toll Free Number</string>
+
+</resources>

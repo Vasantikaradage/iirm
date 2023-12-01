@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/nhborder"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/header_timer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_size_12"
+            android:fontFamily="@font/setpoppinssemibold"
+            android:text="Timer"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="@dimen/material_size_24"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="@dimen/material_size_12"
+            android:layout_toEndOf="@id/header_timer_info"
+            android:src="@drawable/ic_stop_watch"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAlertMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_holder"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/cardMargin"
+        android:layout_marginTop="@dimen/textSize"
+        android:layout_marginBottom="@dimen/textSize"
+        android:fontFamily="@font/poppinssemibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="12:00:00"
+        android:textColor="@color/cpb_black"
+        android:textSize="@dimen/headerTextSize" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cardMargin"
+        android:hint="99999999999"
+        android:maxLength="10"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAlertMessage"
+        android:background="@drawable/button_selector"
+        android:fontFamily="@font/setpoppins"
+        android:text="Dismiss"
+        android:textAllCaps="false"
+        android:textColor="@color/cpb_white"
+        android:textSize="@dimen/largeTextSize"
+        android:textStyle="bold" />
+
+</RelativeLayout>

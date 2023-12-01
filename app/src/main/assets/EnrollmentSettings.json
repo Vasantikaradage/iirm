@@ -1,0 +1,76 @@
+{
+  "Settings": [
+    {
+      "condition_id": "1",
+      "condition": "LGBT",
+      "isAllowed": "0",
+      "isCertificateRequired": "0",
+      "max_age": "NA",
+      "extra_premium_required": "0",
+      "premium": "NA",
+      "employer_contribution": "NA",
+      "employee_contribution": "NA",
+      "cross_combination": "NA"
+    },
+    {
+      "condition_id": "2",
+      "condition": "Differently_Able_Child",
+      "isAllowed": "1",
+      "isCertificateRequired": "1",
+      "max_age": "NA",
+      "extra_premium_required": "NA",
+      "premium": "NA",
+      "employer_contribution": "NA",
+      "employee_contribution": "NA",
+      "cross_combination": "NA"
+    },
+    {
+      "condition_id": "3",
+      "condition": "UnMarriedDaughter",
+      "isAllowed": "1",
+      "isCertificateRequired": "0",
+      "max_age": "30",
+      "extra_premium_required": "NA",
+      "premium": "NA",
+      "employer_contribution": "NA",
+      "employee_contribution": "NA",
+      "cross_combination": "NA"
+    },
+    {
+      "condition_id": "4",
+      "condition": "ExtraChildCanCovered",
+      "isAllowed": "1",
+      "isCertificateRequired": "1",
+      "max_age": "30",
+      "extra_premium_required": "1",
+      "premium": "4,000",
+      "employer_contribution": "2,000",
+      "employee_contribution": "2,000",
+      "cross_combination": "NA"
+    },
+    {
+      "condition_id": "5",
+      "condition": "ParentCoveredInBase",
+      "isAllowed": "1",
+      "isCertificateRequired": "1",
+      "max_age": "30",
+      "extra_premium_required": "1",
+      "premium": "4,000",
+      "employer_contribution": "2,000",
+      "employee_contribution": "2,000",
+      "cross_combination": "1"
+    },
+    {
+      "condition_id": "6",
+      "condition": "Parent_cross_combination",
+      "isAllowed": "1",
+      "isCertificateRequired": "NA",
+      "max_age": "100",
+      "extra_premium_required": "1",
+      "premium": "4,000",
+      "employer_contribution": "2,000",
+      "employee_contribution": "2,000",
+      "cross_combination": "NA"
+    }
+  ]
+}
